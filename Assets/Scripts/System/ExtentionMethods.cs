@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Spine.Unity;
 using UnityEngine;
 //It is common to create a class to contain all of your
 //extension methods. This class must be static.
@@ -79,16 +78,7 @@ public static class ExtensionMethods {
             }
         }
     }
-    //Destroys all monos in childern except which have a component of type T
-    public static void DestroyAllMonosExcept<T>(this GameObject go) {
-        List<Component> components = new List<Component>(go.GetComponentsInChildren(typeof(MonoBehaviour)));
-        for (int i = components.Count - 1; i >= 0; i--) {
-            if (!(components[i] is T || components[i] is SkeletonMecanim)) {
-                //Debug.Log(components[i].GetType()+" its not equal by type: " + typeof(T));
-                GameObject.Destroy(components[i]);
-            }
-        }
-    }
+
     //other stuff
     public static Vector3Int ConvertToVector3(this Vector3 vec3) {
         return new Vector3Int((int)vec3.x, (int)vec3.y, (int)vec3.z);
@@ -162,13 +152,6 @@ public static class ExtensionMethods {
         return GeometryUtility.TestPlanesAABB(planes, renderer.bounds);
     }
 
-    public static OwnerType Set(this OwnerType ownerType, OwnerType[] newTypes) {
-        int outputType = 0;
-        foreach (OwnerType type in newTypes) {
-            outputType |= (1 << (int)type - 1);
-        }
-        return (OwnerType)outputType;
-    }
     //Transform extentions"
     public static Transform FindNearest(this List<Transform> transformList, Transform target) {
         if (transformList.Count == 0)
