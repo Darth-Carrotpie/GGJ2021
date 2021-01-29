@@ -57,15 +57,8 @@ public class EventCoordinator : Singleton<EventCoordinator> {
         if (Instance == null)return;
         List<string> ignoreList = new List<string>();
         if (Instance.enableDebugging == true) {
-            ignoreList.Add(EventName.System.Sheep.Roam());
-            ignoreList.Add(EventName.System.Economy.EatGrass());
-            ignoreList.Add(EventName.System.Player.PlayerCardsSorted());
-            ignoreList.Add(EventName.System.Player.ProfileUpdate());
-            ignoreList.Add(EventName.System.Economy.GrassChanged());
-            ignoreList.Add(EventName.System.Economy.GoldChanged());
-            ignoreList.Add(EventName.System.Sheep.Spawned());
-            ignoreList.Add(EventName.Input.Swipe());
-            ignoreList.Add(EventName.System.Sheep.ReadyToLaunch());
+            //ignoreList.Add(EventName.System.Sheep.Roam());
+
         }
         UnityGameEvent thisEvent = null;
         if (Instance.eventDictionary.TryGetValue(eventName, out thisEvent)) {
