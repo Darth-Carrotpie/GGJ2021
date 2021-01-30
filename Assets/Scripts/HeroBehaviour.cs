@@ -14,6 +14,8 @@ public class HeroBehaviour : MonoBehaviour
     }
 
     NavMeshAgent agent;
+    Animator animator;
+    private State previousState = State.MobAggro;
     private State state = State.MobAggro;
     // Player/Loot/Mob, if null: immediate reevaluation
     private Transform target;
@@ -95,7 +97,7 @@ public class HeroBehaviour : MonoBehaviour
             return;
         }
 
-        if (mob != null && CanSee(mob))
+        if (mob != null)
         {
             state = State.MobAggro;
             target = mob;
@@ -117,11 +119,13 @@ public class HeroBehaviour : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponentInChildren<Animator>();
         StartCoroutine(Wait());
     }
 
     IEnumerator Chase()
     {
+        animator.SetInteger("state", 1);
         // Walk animation
         float startTime = Time.time;
 
@@ -157,6 +161,7 @@ public class HeroBehaviour : MonoBehaviour
 
     IEnumerator Wait()
     {
+        animator.SetInteger("state", 0);
         // Wait animation
         float startTime = Time.time;
         agent.isStopped = true;
@@ -171,9 +176,11 @@ public class HeroBehaviour : MonoBehaviour
 
     IEnumerator Attack()
     {
+        animator.SetInteger("state", 3);
         // Attack animation
         float startTime = Time.time;
 
+        agent.isStopped = true;
         do
         {
             if (target == null)
@@ -181,21 +188,22 @@ public class HeroBehaviour : MonoBehaviour
                 StartCoroutine(Wait());
                 yield break;
             }
-            // TODO: stop while moving?
-            agent.SetDestination(target.position);
-            agent.isStopped = false;
 
             yield return null;
         }
         while (startTime + attackTime > Time.time);
 
-        Debug.Log("hit");
-        EventCoordinator.TriggerEvent(EventName.System.Environment.Damage(), GameMessage.Write().WithTargetTransform(target));
+        if (target != null && CanAttack(target))
+        {
+            Debug.Log("hit");
+            EventCoordinator.TriggerEvent(EventName.System.Environment.Damage(), GameMessage.Write().WithTargetTransform(target));
+        }
         Reevaluate();
     }
 
     IEnumerator PickUpLoot()
     {
+        animator.SetInteger("state", 2);
         // PickUp animation
         float startTime = Time.time;
 
@@ -214,5 +222,13 @@ public class HeroBehaviour : MonoBehaviour
         Debug.Log("pick up");
         EventCoordinator.TriggerEvent(EventName.System.Environment.PickUpLoot(), GameMessage.Write().WithTargetTransform(target));
         Reevaluate();
+    }
+
+    void Update()
+    {
+        if (Mathf.Abs(agent.velocity.x) > 0.01)
+        {
+            animator.transform.localScale = new Vector3(agent.velocity.x < 0 ? 1 : -1, 1, 1);
+        }
     }
 }
