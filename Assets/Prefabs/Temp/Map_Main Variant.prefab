@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4796846504930056545
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7513945415691117485, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945415691117485, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_SortOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945415691117485, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416114945302, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416114945302, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_SortOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416621512868, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_CellLayout
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416621512869, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_Name
+      value: Map_Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416621512871, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416621512871, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416621512871, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416621512871, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416695313712, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416695313715, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416695313715, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_SortOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416855937461, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416855937461, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_SortOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416970928262, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945416970928262, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_SortOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945417341624812, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945417341624812, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_SortOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945417456062133, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513945417456062133, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+      propertyPath: m_SortOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7513945416695313712, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 59a01d709a14fb64fbc05313b2cad73b, type: 3}
