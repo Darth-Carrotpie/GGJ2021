@@ -31,9 +31,11 @@ public class LootFly : MonoBehaviour {
         if (progress < 1) {
             progress += Time.deltaTime * speed;
             transform.position = Curves.CubeBezier3(startingPosition, p1Position, p2Position, destinationPosition, progress);
-            transform.RotateAroundLocal(Vector3.forward, rotationSpeed);
+            transform.RotateAroundLocal(Vector3.up, rotationSpeed);
         }
-        if (progress >= 1)
+        if (progress >= 1) {
+            GetComponentInChildren<SpriteRenderer>().sortingOrder = 2;
             Destroy(this);
+        }
     }
 }
