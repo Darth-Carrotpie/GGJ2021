@@ -18,6 +18,7 @@ public class LootSpawnController : MonoBehaviour {
 
     void OnMobKilled(GameMessage msg) {
         GameObject newSpawnPoint = Instantiate(lootSpawnPointPrefab);
+        newSpawnPoint.GetComponent<FountainSpawn>().numberOfItems = 3;
         newSpawnPoint.transform.parent = transform.parent;
         newSpawnPoint.transform.position = msg.targetTransform.position;
     }
