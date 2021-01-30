@@ -1,172 +1,127 @@
 fileFormatVersion: 2
-guid: b859db4a903269d4eaffda1f6842fe28
+guid: 00575922ad95c7542a236d58e10770f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5816642994671486895
-    second: portal_0
+      213: -4257342873450878135
+    second: goblin_walk_0
   - first:
-      213: 2720290072527178061
-    second: portal_1
+      213: -390892230489485837
+    second: goblin_walk_1
   - first:
-      213: -68809774801260167
-    second: portal_2
+      213: -1106248194141385487
+    second: goblin_walk_2
   - first:
-      213: -4604820735629425415
-    second: portal_3
+      213: 4214893597756654009
+    second: goblin_walk_3
   - first:
-      213: -6538954407832343249
-    second: portal_4
+      213: -4131830933385529233
+    second: goblin_walk_4
   - first:
-      213: 7305771432161720801
-    second: portal_5
+      213: -5635103169612350618
+    second: goblin_walk_5
   - first:
-      213: 6485356823907138318
-    second: portal_6
+      213: -1557665987387135705
+    second: goblin_walk_6
   - first:
-      213: -1369078418111764407
-    second: portal_7
+      213: -8122203653295522958
+    second: goblin_walk_7
   - first:
-      213: -5259029107282984620
-    second: portal_8
+      213: -2411340051963590420
+    second: goblin_walk_8
   - first:
-      213: -3465161401354618432
-    second: portal_9
+      213: -4338971286226687613
+    second: goblin_walk_9
   - first:
-      213: -3142282842932432680
-    second: portal_10
+      213: -6189867087137055187
+    second: goblin_walk_10
   - first:
-      213: -2752164304205098937
-    second: portal_11
+      213: 7584420207812340491
+    second: goblin_walk_11
   - first:
-      213: -6197552279534655991
-    second: portal_12
+      213: 7547605634208444289
+    second: goblin_walk_12
   - first:
-      213: -6891787091303663701
-    second: portal_13
+      213: -8646113980212000731
+    second: goblin_walk_13
   - first:
-      213: 6254885828516898367
-    second: portal_14
+      213: 4025206045889192231
+    second: goblin_walk_14
   - first:
-      213: 4289526287408063560
-    second: portal_15
+      213: -1991312256043552525
+    second: goblin_walk_15
   - first:
-      213: -7872368518777113347
-    second: portal_16
+      213: 3033115362687864589
+    second: goblin_walk_16
   - first:
-      213: 5982004341153625043
-    second: portal_17
+      213: -2449786638216492885
+    second: goblin_walk_17
   - first:
-      213: 5761590866181317772
-    second: portal_18
+      213: 9049799266022398784
+    second: goblin_walk_18
   - first:
-      213: 6761846517699090533
-    second: portal_19
+      213: -1155212160997905606
+    second: goblin_walk_19
   - first:
-      213: -4564995282794687626
-    second: portal_20
+      213: -5403751902814983800
+    second: goblin_walk_20
   - first:
-      213: 4556539044645045482
-    second: portal_21
+      213: -4574085241897132171
+    second: goblin_walk_21
   - first:
-      213: -964237697247841496
-    second: portal_22
+      213: 1165782749040131926
+    second: goblin_walk_22
   - first:
-      213: 7105731126955614146
-    second: portal_23
+      213: 9004410783341467770
+    second: goblin_walk_23
   - first:
-      213: 110412659064575055
-    second: portal_24
+      213: -1382193109358981354
+    second: goblin_walk_24
   - first:
-      213: 5488354069480031224
-    second: portal_25
+      213: 8376618912921081759
+    second: goblin_walk_25
   - first:
-      213: 3141109237652767854
-    second: portal_26
+      213: 6442616529329255154
+    second: goblin_walk_26
   - first:
-      213: -4587924070003593828
-    second: portal_27
+      213: 6325515028383567224
+    second: goblin_walk_27
   - first:
-      213: -4309170675082696740
-    second: portal_28
+      213: 2094365395938733368
+    second: goblin_walk_28
   - first:
-      213: -8276187910298641390
-    second: portal_29
+      213: -2196985146561126811
+    second: goblin_walk_29
   - first:
-      213: 7215495733020166267
-    second: portal_30
+      213: 3838445108836626113
+    second: goblin_walk_30
   - first:
-      213: -2233781543957371108
-    second: portal_31
+      213: -8653447595068029013
+    second: goblin_walk_31
   - first:
-      213: 2770750186553321371
-    second: portal_32
+      213: -812366829567365760
+    second: goblin_walk_32
   - first:
-      213: 3519683660889738706
-    second: portal_33
+      213: -1025899892194002063
+    second: goblin_walk_33
   - first:
-      213: -6715382103667367712
-    second: portal_34
+      213: -435468066928180472
+    second: goblin_walk_34
   - first:
-      213: 3645392148404397502
-    second: portal_35
+      213: 1184365104289698995
+    second: goblin_walk_35
   - first:
-      213: 5749715998837705422
-    second: portal_36
+      213: 2877606793570929264
+    second: goblin_walk_36
   - first:
-      213: -2723230416233978482
-    second: portal_37
+      213: 2067354159771892543
+    second: goblin_walk_37
   - first:
-      213: 3164100806476118542
-    second: portal_38
+      213: 438199072709418165
+    second: goblin_walk_38
   - first:
-      213: -698289328149983298
-    second: portal_39
-  - first:
-      213: -5087618544204744508
-    second: portal_40
-  - first:
-      213: 8584300926429160847
-    second: portal_41
-  - first:
-      213: 1379200426827903160
-    second: portal_42
-  - first:
-      213: 4842355871279700921
-    second: portal_43
-  - first:
-      213: -2176159710935475862
-    second: portal_44
-  - first:
-      213: 8001834983118549767
-    second: portal_45
-  - first:
-      213: 2571751889513973633
-    second: portal_46
-  - first:
-      213: -7794944827919970231
-    second: portal_47
-  - first:
-      213: 7759636044423142395
-    second: portal_48
-  - first:
-      213: 7939254286272668390
-    second: portal_49
-  - first:
-      213: -2085746944696515320
-    second: portal_50
-  - first:
-      213: 7703005489381299797
-    second: portal_51
-  - first:
-      213: 7452554248988469141
-    second: portal_52
-  - first:
-      213: 934112985132118732
-    second: portal_53
-  - first:
-      213: -2586251550406295489
-    second: portal_54
+      213: 2685720629863932020
+    second: goblin_walk_39
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -304,7 +259,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: portal_0
+      name: goblin_walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -312,20 +267,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1587755a302274fa0800000000000000
-      internalID: -5816642994671486895
+      spriteID: 94b6be48631eae4c0800000000000000
+      internalID: -4257342873450878135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_1
+      name: goblin_walk_1
       rect:
         serializedVersion: 2
         x: 256
@@ -333,20 +288,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d490103886960c520800000000000000
-      internalID: 2720290072527178061
+      spriteID: 3fdc6306695439af0800000000000000
+      internalID: -390892230489485837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_2
+      name: goblin_walk_2
       rect:
         serializedVersion: 2
         x: 512
@@ -354,20 +309,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97175e7dfd98b0ff0800000000000000
-      internalID: -68809774801260167
+      spriteID: 1fc09cae021d5a0f0800000000000000
+      internalID: -1106248194141385487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_3
+      name: goblin_walk_3
       rect:
         serializedVersion: 2
         x: 768
@@ -375,20 +330,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f4847630f36810c0800000000000000
-      internalID: -4604820735629425415
+      spriteID: 9b18a5c456f4e7a30800000000000000
+      internalID: 4214893597756654009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_4
+      name: goblin_walk_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -396,20 +351,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2dada66c97f045a0800000000000000
-      internalID: -6538954407832343249
+      spriteID: f68b59f48a9c8a6c0800000000000000
+      internalID: -4131830933385529233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_5
+      name: goblin_walk_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -417,62 +372,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e93230f860536560800000000000000
-      internalID: 7305771432161720801
+      spriteID: 66bf396f5871cc1b0800000000000000
+      internalID: -5635103169612350618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_6
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 1536
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0bf3a2abad900a50800000000000000
-      internalID: 6485356823907138318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_7
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 1536
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9486bc2be6e000de0800000000000000
-      internalID: -1369078418111764407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_8
+      name: goblin_walk_6
       rect:
         serializedVersion: 2
         x: 0
@@ -480,20 +393,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45145f4f3ec2407b0800000000000000
-      internalID: -5259029107282984620
+      spriteID: 729e41f890f026ae0800000000000000
+      internalID: -1557665987387135705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_9
+      name: goblin_walk_7
       rect:
         serializedVersion: 2
         x: 256
@@ -501,20 +414,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9fcde801649efc0800000000000000
-      internalID: -3465161401354618432
+      spriteID: 27bb0f38fc2284f80800000000000000
+      internalID: -8122203653295522958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_10
+      name: goblin_walk_8
       rect:
         serializedVersion: 2
         x: 512
@@ -522,20 +435,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d03533276e5464d0800000000000000
-      internalID: -3142282842932432680
+      spriteID: ce8c902aff2398ed0800000000000000
+      internalID: -2411340051963590420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_11
+      name: goblin_walk_9
       rect:
         serializedVersion: 2
         x: 768
@@ -543,20 +456,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740585c95295ec9d0800000000000000
-      internalID: -2752164304205098937
+      spriteID: 389a6d1aa90e8c3c0800000000000000
+      internalID: -4338971286226687613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_12
+      name: goblin_walk_10
       rect:
         serializedVersion: 2
         x: 1024
@@ -564,20 +477,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 906ac6da90fddf9a0800000000000000
-      internalID: -6197552279534655991
+      spriteID: d2e5058fdac291aa0800000000000000
+      internalID: -6189867087137055187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_13
+      name: goblin_walk_11
       rect:
         serializedVersion: 2
         x: 1280
@@ -585,62 +498,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba7f83b97247b50a0800000000000000
-      internalID: -6891787091303663701
+      spriteID: b0be2f9bef5414960800000000000000
+      internalID: 7584420207812340491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_14
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 1280
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f36ef5f6581ddc650800000000000000
-      internalID: 6254885828516898367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_15
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 1280
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84468a77e65778b30800000000000000
-      internalID: 4289526287408063560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_16
+      name: goblin_walk_12
       rect:
         serializedVersion: 2
         x: 0
@@ -648,20 +519,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df47251ba8abfb290800000000000000
-      internalID: -7872368518777113347
+      spriteID: 18f2bbbd55b7eb860800000000000000
+      internalID: 7547605634208444289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_17
+      name: goblin_walk_13
       rect:
         serializedVersion: 2
         x: 256
@@ -669,20 +540,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d37e471149540350800000000000000
-      internalID: 5982004341153625043
+      spriteID: 528cce1e425d20880800000000000000
+      internalID: -8646113980212000731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_18
+      name: goblin_walk_14
       rect:
         serializedVersion: 2
         x: 512
@@ -690,20 +561,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c846fd7dd5845ff40800000000000000
-      internalID: 5761590866181317772
+      spriteID: 721eaf082976cd730800000000000000
+      internalID: 4025206045889192231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_19
+      name: goblin_walk_15
       rect:
         serializedVersion: 2
         x: 768
@@ -711,20 +582,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5689a210597e6dd50800000000000000
-      internalID: 6761846517699090533
+      spriteID: 3f074a5bd007d54e0800000000000000
+      internalID: -1991312256043552525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_20
+      name: goblin_walk_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -732,20 +603,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67350b70af0e5a0c0800000000000000
-      internalID: -4564995282794687626
+      spriteID: d0f4acb2a5ac71a20800000000000000
+      internalID: 3033115362687864589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_21
+      name: goblin_walk_17
       rect:
         serializedVersion: 2
         x: 1280
@@ -753,62 +624,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae404499e141c3f30800000000000000
-      internalID: 4556539044645045482
+      spriteID: ba88b95380c900ed0800000000000000
+      internalID: -2449786638216492885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_22
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 1024
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82370805ce65e92f0800000000000000
-      internalID: -964237697247841496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_23
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 1024
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2cf10abefc0ac9260800000000000000
-      internalID: 7105731126955614146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_24
+      name: goblin_walk_18
       rect:
         serializedVersion: 2
         x: 0
@@ -816,20 +645,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f44104a7ab3488100800000000000000
-      internalID: 110412659064575055
+      spriteID: 04b1bdb0c78579d70800000000000000
+      internalID: 9049799266022398784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_25
+      name: goblin_walk_19
       rect:
         serializedVersion: 2
         x: 256
@@ -837,20 +666,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f34de892fc8a2c40800000000000000
-      internalID: 5488354069480031224
+      spriteID: a3b228ff8acd7ffe0800000000000000
+      internalID: -1155212160997905606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_26
+      name: goblin_walk_20
       rect:
         serializedVersion: 2
         x: 512
@@ -858,20 +687,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e64cdf69536779b20800000000000000
-      internalID: 3141109237652767854
+      spriteID: 8892f5256440205b0800000000000000
+      internalID: -5403751902814983800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_27
+      name: goblin_walk_21
       rect:
         serializedVersion: 2
         x: 768
@@ -879,20 +708,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9da8febd5b6450c0800000000000000
-      internalID: -4587924070003593828
+      spriteID: 57f5d5005b59580c0800000000000000
+      internalID: -4574085241897132171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_28
+      name: goblin_walk_22
       rect:
         serializedVersion: 2
         x: 1024
@@ -900,20 +729,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd76a2b1a10c234c0800000000000000
-      internalID: -4309170675082696740
+      spriteID: 65fb0d1db31bd2010800000000000000
+      internalID: 1165782749040131926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_29
+      name: goblin_walk_23
       rect:
         serializedVersion: 2
         x: 1280
@@ -921,62 +750,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21c5448d1f2152d80800000000000000
-      internalID: -8276187910298641390
+      spriteID: a78d3c866e716fc70800000000000000
+      internalID: 9004410783341467770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_30
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b78830dc327922460800000000000000
-      internalID: 7215495733020166267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_31
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c17e89655830001e0800000000000000
-      internalID: -2233781543957371108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_32
+      name: goblin_walk_24
       rect:
         serializedVersion: 2
         x: 0
@@ -984,20 +771,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b97abd65d9ea37620800000000000000
-      internalID: 2770750186553321371
+      spriteID: 61f4aa1b0b671dce0800000000000000
+      internalID: -1382193109358981354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_33
+      name: goblin_walk_25
       rect:
         serializedVersion: 2
         x: 256
@@ -1005,20 +792,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dd441934ad68d030800000000000000
-      internalID: 3519683660889738706
+      spriteID: f97da73258abf3470800000000000000
+      internalID: 8376618912921081759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_34
+      name: goblin_walk_26
       rect:
         serializedVersion: 2
         x: 512
@@ -1026,20 +813,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e024eb6e8b2ec2a0800000000000000
-      internalID: -6715382103667367712
+      spriteID: 2f2fab65995c86950800000000000000
+      internalID: 6442616529329255154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_35
+      name: goblin_walk_27
       rect:
         serializedVersion: 2
         x: 768
@@ -1047,20 +834,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb564a848d8079230800000000000000
-      internalID: 3645392148404397502
+      spriteID: 87d8230876eb8c750800000000000000
+      internalID: 6325515028383567224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_36
+      name: goblin_walk_28
       rect:
         serializedVersion: 2
         x: 1024
@@ -1068,20 +855,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eca0a16dc381bcf40800000000000000
-      internalID: 5749715998837705422
+      spriteID: 83d6cce2b3ea01d10800000000000000
+      internalID: 2094365395938733368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_37
+      name: goblin_walk_29
       rect:
         serializedVersion: 2
         x: 1280
@@ -1089,62 +876,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e85a5de5d54253ad0800000000000000
-      internalID: -2723230416233978482
+      spriteID: 56e1a6a36adb281e0800000000000000
+      internalID: -2196985146561126811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_38
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0a398b5be429eb20800000000000000
-      internalID: 3164100806476118542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_39
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebf8c254e8d2f46f0800000000000000
-      internalID: -698289328149983298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_40
+      name: goblin_walk_30
       rect:
         serializedVersion: 2
         x: 0
@@ -1152,20 +897,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c87cffa3e52569b0800000000000000
-      internalID: -5087618544204744508
+      spriteID: 1ceea025d75e44530800000000000000
+      internalID: 3838445108836626113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_41
+      name: goblin_walk_31
       rect:
         serializedVersion: 2
         x: 256
@@ -1173,20 +918,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f85edd40630912770800000000000000
-      internalID: 8584300926429160847
+      spriteID: ba7038d9247c8e780800000000000000
+      internalID: -8653447595068029013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_42
+      name: goblin_walk_32
       rect:
         serializedVersion: 2
         x: 512
@@ -1194,20 +939,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b0f42b1b77e32310800000000000000
-      internalID: 1379200426827903160
+      spriteID: 08da3503ca4e9b4f0800000000000000
+      internalID: -812366829567365760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_43
+      name: goblin_walk_33
       rect:
         serializedVersion: 2
         x: 768
@@ -1215,20 +960,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bb57af4201833340800000000000000
-      internalID: 4842355871279700921
+      spriteID: 17b3aa6cb7543c1f0800000000000000
+      internalID: -1025899892194002063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_44
+      name: goblin_walk_34
       rect:
         serializedVersion: 2
         x: 1024
@@ -1236,20 +981,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a699c2fc54abcc1e0800000000000000
-      internalID: -2176159710935475862
+      spriteID: 80348bfa918e4f9f0800000000000000
+      internalID: -435468066928180472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_45
+      name: goblin_walk_35
       rect:
         serializedVersion: 2
         x: 1280
@@ -1257,62 +1002,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7033318858a3c0f60800000000000000
-      internalID: 8001834983118549767
+      spriteID: 3b45e8d89c5bf6010800000000000000
+      internalID: 1184365104289698995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_46
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1878be0c7b2b0b320800000000000000
-      internalID: 2571751889513973633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_47
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 940df087afac2d390800000000000000
-      internalID: -7794944827919970231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_48
+      name: goblin_walk_36
       rect:
         serializedVersion: 2
         x: 0
@@ -1320,20 +1023,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfb982ebed3cfab60800000000000000
-      internalID: 7759636044423142395
+      spriteID: 07acb0ee1205fe720800000000000000
+      internalID: 2877606793570929264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_49
+      name: goblin_walk_37
       rect:
         serializedVersion: 2
         x: 256
@@ -1341,20 +1044,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e2a7ca95b5ed2e60800000000000000
-      internalID: 7939254286272668390
+      spriteID: f3b312ea7a7b0bc10800000000000000
+      internalID: 2067354159771892543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_50
+      name: goblin_walk_38
       rect:
         serializedVersion: 2
         x: 512
@@ -1362,20 +1065,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 805020e5430fd03e0800000000000000
-      internalID: -2085746944696515320
+      spriteID: 5bc10c52cbbc41600800000000000000
+      internalID: 438199072709418165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_51
+      name: goblin_walk_39
       rect:
         serializedVersion: 2
         x: 768
@@ -1383,77 +1086,14 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 556d4792ea296ea60800000000000000
-      internalID: 7703005489381299797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_52
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5972948aa9acc6760800000000000000
-      internalID: 7452554248988469141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_53
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc231e29fc2a6fc00800000000000000
-      internalID: 934112985132118732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: portal_54
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f30ca3edae9cb1cd0800000000000000
-      internalID: -2586251550406295489
+      spriteID: 4706afceea8954520800000000000000
+      internalID: 2685720629863932020
       vertices: []
       indices: 
       edges: []
@@ -1461,7 +1101,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9755952eb217c7e4c9edaa0c7d897466
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

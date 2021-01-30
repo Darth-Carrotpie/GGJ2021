@@ -7,6 +7,7 @@ public class PlayerMovementHandler : MonoBehaviour {
     Vector3 previousMoveDirection;
     public float baseSpeed = 0.1f;
     float speed = 0f;
+    bool stopTrigger = false;
     void Start() {
         EventCoordinator.StartListening(EventName.Input.Player.Move(), OnMoveEvent);
     }
@@ -21,10 +22,19 @@ public class PlayerMovementHandler : MonoBehaviour {
         } else {
             if (speed > 0)
                 speed -= Time.deltaTime * 4f;
+
+            if (speed <= 0) {
+                stopTrigger = true;
+            }
         }
         if (speed > 0) {
             float actual = Easing.Quadratic.Out(speed);
             transform.Translate(previousMoveDirection * actual * baseSpeed);
+        }
+
+        if (stopTrigger) {
+            stopTrigger = false;
+            EventCoordinator.TriggerEvent(EventName.Input.Player.MovementStopped(), GameMessage.Write());
         }
     }
 }
