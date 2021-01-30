@@ -191,8 +191,8 @@ Camera:
   m_GameObject: {fileID: 258333929}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.374466, g: 0.4245283, b: 0.39929813, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -514,7 +514,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754430115}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1139,8 +1139,10 @@ MonoBehaviour:
   aggroDuration: 2
   thinkingDuration: 0.5
   sightRadius: 5
-  attackRadius: 2
+  attackRange: 2
   attackTime: 1
+  pickUpRange: 2
+  pickUpTime: 1
 --- !u!195 &1757054909
 NavMeshAgent:
   m_ObjectHideFlags: 0
