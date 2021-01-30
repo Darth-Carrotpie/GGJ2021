@@ -920,10 +920,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1757054903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef3faad84ab00c6458fe1e321ce1d04d, type: 3}
+  m_Script: {fileID: 11500000, guid: c490d81fe2784cd4dadb010c320e4159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 383848992}
+  aggroDuration: 3
+  thinkingDuration: 0.5
+  sightRadius: 5
 --- !u!195 &1757054909
 NavMeshAgent:
   m_ObjectHideFlags: 0
