@@ -222,4 +222,12 @@ public class HeroBehaviour : MonoBehaviour
         EventCoordinator.TriggerEvent(EventName.System.Environment.PickUpLoot(), GameMessage.Write().WithTargetTransform(target));
         Reevaluate();
     }
+
+    void Update()
+    {
+        if (Mathf.Abs(agent.velocity.x) > 0.01)
+        {
+            animator.transform.localScale = new Vector3(agent.velocity.x < 0 ? 1 : -1, 1, 1);
+        }
+    }
 }
