@@ -15,6 +15,11 @@ public class GameMessage {
         coordinates = value;
         return this;
     }
+    public Vector2 direction;
+    public GameMessage WithDirection(Vector2 value) {
+        direction = value;
+        return this;
+    }
 
     public int intMessage;
     public GameMessage WithIntMessage(int value) {

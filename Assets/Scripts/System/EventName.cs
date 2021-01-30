@@ -15,12 +15,12 @@ public class EventName {
             public static string None() { return null; }
             public static List<string> Get() { return new List<string> { None() }; }
         }
-        public class Network {
-            public static string View() { return "View"; }
-            public static string PlayerJoined() { return "PlayerJoined"; }
-            public static string PlayerRecalculate() { return "PlayerRecalculate"; }
-            public static string PlayerLeft() { return "PlayerLeft"; }
-            public static List<string> Get() { return new List<string> { View(), PlayerJoined(), PlayerLeft(), PlayerRecalculate() }; }
+        public class Player {
+            public static string Move() { return "Player_Move"; }
+            public static string StartChannelingPortal() { return "Player_CStartChannelingPortal"; }
+            public static string StopChannelingPortal() { return "Player_CStartChannelingPortal"; }
+            public static string OpenChest() { return "Player_OpenChest"; }
+            public static List<string> Get() { return new List<string> { Move(), StartChannelingPortal(), StopChannelingPortal(), OpenChest() }; }
         }
         public static string Tap() { return "Input_Tap"; }
         public static string StartGame() { return "Input_StartGame"; }
@@ -31,7 +31,7 @@ public class EventName {
                     StartGame(),
                 }
                 .Concat(Menus.Get())
-                .Concat(Network.Get())
+                .Concat(Player.Get())
                 .ToList();
         }
     }
