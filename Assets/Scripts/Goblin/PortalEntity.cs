@@ -37,6 +37,10 @@ public class PortalEntity : MonoBehaviour {
         currentProgress = 1 - progress;
         rend.material.SetFloat("FillLevelA", currentProgress);
         rend.material.SetFloat("FillLevelB", 0);
+        if (currentProgress <= 0) {
+            DestroyPortal();
+            EventCoordinator.TriggerEvent(EventName.System.Victory(), GameMessage.Write().WithCoordinates(transform.position));
+        }
 
     }
     public void DestroyPortal() {

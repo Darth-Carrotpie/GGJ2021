@@ -64,11 +64,13 @@ public class EventName {
             public static List<string> Get() { return new List<string> { ProfileCreated(), ProfileUpdate() }; }
         }
         //public static string NextScene() { return "NextScene"; }
+        public static string Victory() { return "Victory"; }
         public static string SceneLoaded() { return "SceneLoaded"; }
         public static List<string> Get() {
             return new List<string> {
                 //MapLayoutChanged(),
-                SceneLoaded()
+                SceneLoaded(),
+                Victory()
             }.Concat(Economy.Get()).Concat(Environment.Get()).ToList();
         }
     }
