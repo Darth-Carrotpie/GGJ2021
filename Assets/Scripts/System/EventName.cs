@@ -17,8 +17,8 @@ public class EventName {
         }
         public class Player {
             public static string Move() { return "Player_Move"; }
-            public static string StartChannelingPortal() { return "Player_CStartChannelingPortal"; }
-            public static string StopChannelingPortal() { return "Player_CStartChannelingPortal"; }
+            public static string StartChannelingPortal() { return "Player_StartChannelingPortal"; }
+            public static string StopChannelingPortal() { return "Player_StopChannelingPortal"; }
             public static string OpenChest() { return "Player_OpenChest"; }
             public static List<string> Get() { return new List<string> { Move(), StartChannelingPortal(), StopChannelingPortal(), OpenChest() }; }
         }

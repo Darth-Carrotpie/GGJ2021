@@ -10,8 +10,8 @@ public class GameMessage {
         return this;
     }
 
-    public Vector2 coordinates;
-    public GameMessage WithCoordinates(Vector2 value) {
+    public Vector3 coordinates;
+    public GameMessage WithCoordinates(Vector3 value) {
         coordinates = value;
         return this;
     }
