@@ -97,7 +97,7 @@ public class HeroBehaviour : MonoBehaviour
             return;
         }
 
-        if (mob != null && CanSee(mob))
+        if (mob != null)
         {
             state = State.MobAggro;
             target = mob;
@@ -180,6 +180,7 @@ public class HeroBehaviour : MonoBehaviour
         // Attack animation
         float startTime = Time.time;
 
+        agent.isStopped = true;
         do
         {
             if (target == null)
@@ -187,16 +188,16 @@ public class HeroBehaviour : MonoBehaviour
                 StartCoroutine(Wait());
                 yield break;
             }
-            // TODO: stop while moving?
-            agent.SetDestination(target.position);
-            agent.isStopped = false;
 
             yield return null;
         }
         while (startTime + attackTime > Time.time);
 
-        Debug.Log("hit");
-        EventCoordinator.TriggerEvent(EventName.System.Environment.Damage(), GameMessage.Write().WithTargetTransform(target));
+        if (target != null && CanAttack(target))
+        {
+            Debug.Log("hit");
+            EventCoordinator.TriggerEvent(EventName.System.Environment.Damage(), GameMessage.Write().WithTargetTransform(target));
+        }
         Reevaluate();
     }
 
