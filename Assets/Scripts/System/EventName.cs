@@ -68,7 +68,8 @@ public class EventName
             public static string CreateLoot() { return "System_Environment_CreateLoot"; }
             public static string CreateMob() { return "System_Environment_CreateMob"; }
             public static string PickUpLoot() { return "System_Environment_PickUpLoot"; }
-            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), DestroyArena(), ArenaDestroyed(), ArenaAnimating(), PlayfieldAnimated(), ArenaAnimated(), CleanScene(), Damage(), CreateLoot(), CreateMob(), PickUpLoot() }; }
+            public static string MobKilled() { return "System_Environment_MobKilled"; }
+            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), DestroyArena(), ArenaDestroyed(), ArenaAnimating(), PlayfieldAnimated(), ArenaAnimated(), CleanScene(), Damage(), CreateLoot(), CreateMob(), PickUpLoot(), MobKilled() }; }
         }
         public class Player
         {
