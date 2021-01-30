@@ -106,7 +106,11 @@ public class HeroBehaviour : MonoBehaviour
     void Reevaluate()
     {
         ReevaluateTarget();
-        StartCoroutine(Chase());
+        if (target)
+        {
+
+            StartCoroutine(Chase());
+        }
         Debug.Log("reevaluated to " + state + target);
     }
 
@@ -114,7 +118,7 @@ public class HeroBehaviour : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        Reevaluate();
+        StartCoroutine(Wait());
     }
 
     IEnumerator Chase()
@@ -177,27 +181,5 @@ public class HeroBehaviour : MonoBehaviour
         Debug.Log("hit");
         EventCoordinator.TriggerEvent(EventName.System.Environment.Damage(), GameMessage.Write().WithTargetTransform(target));
         StartCoroutine(Attack());
-    }
-
-    // Stop AI
-    void OnPlayerKilled()
-    {
-        target = null;
-    }
-
-    void OnLootPickedUp(Transform loot)
-    {
-        if (loot == target)
-        {
-            target = null;
-        }
-    }
-
-    void OnMobKilled(Transform mob)
-    {
-        if (mob == target)
-        {
-            target = null;
-        }
     }
 }
