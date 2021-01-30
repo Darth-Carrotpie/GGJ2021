@@ -25,9 +25,13 @@ public class HeroBehaviour : MonoBehaviour
     [Tooltip("At what distance will the hero aggro on player or loot")]
     public float sightRadius = 5;
     [Tooltip("At what distance hero will start attacking")]
-    public float attackRadius = 2;
+    public float attackRange = 2;
     [Tooltip("Interval between attacks")]
     public float attackTime = 1;
+    [Tooltip("Distance at which item can be picked up")]
+    public float pickUpRange = 2;
+    [Tooltip("Time to pick up")]
+    public float pickUpTime = 1;
 
     bool CanSee(Transform t)
     {
@@ -36,7 +40,12 @@ public class HeroBehaviour : MonoBehaviour
 
     bool CanAttack(Transform t)
     {
-        return Vector3.Distance(transform.position, t.position) < attackRadius;
+        return Vector3.Distance(transform.position, t.position) < attackRange;
+    }
+
+    bool CanPickUp(Transform t)
+    {
+        return Vector3.Distance(transform.position, t.position) < pickUpRange;
     }
 
     void ReevaluateTarget()
@@ -99,7 +108,6 @@ public class HeroBehaviour : MonoBehaviour
         ReevaluateTarget();
         if (target)
         {
-
             StartCoroutine(Chase());
         }
         Debug.Log("reevaluated to " + state + target);
@@ -114,6 +122,7 @@ public class HeroBehaviour : MonoBehaviour
 
     IEnumerator Chase()
     {
+        // Walk animation
         float startTime = Time.time;
 
         do
@@ -131,6 +140,13 @@ public class HeroBehaviour : MonoBehaviour
                 yield break;
             }
 
+            // Attack both player both loot
+            if (state == State.LootAggro && CanPickUp(target))
+            {
+                StartCoroutine(PickUpLoot());
+                yield break;
+            }
+
             agent.SetDestination(target.position);
             agent.isStopped = false;
             yield return null;
@@ -141,7 +157,9 @@ public class HeroBehaviour : MonoBehaviour
 
     IEnumerator Wait()
     {
+        // Wait animation
         float startTime = Time.time;
+        agent.isStopped = true;
 
         do
         {
@@ -153,6 +171,32 @@ public class HeroBehaviour : MonoBehaviour
 
     IEnumerator Attack()
     {
+        // Attack animation
+        float startTime = Time.time;
+
+        do
+        {
+            if (target == null)
+            {
+                StartCoroutine(Wait());
+                yield break;
+            }
+            // TODO: stop while moving?
+            agent.SetDestination(target.position);
+            agent.isStopped = false;
+
+            yield return null;
+        }
+        while (startTime + attackTime > Time.time);
+
+        Debug.Log("hit");
+        EventCoordinator.TriggerEvent(EventName.System.Environment.Damage(), GameMessage.Write().WithTargetTransform(target));
+        Reevaluate();
+    }
+
+    IEnumerator PickUpLoot()
+    {
+        // PickUp animation
         float startTime = Time.time;
 
         do
@@ -163,14 +207,12 @@ public class HeroBehaviour : MonoBehaviour
                 yield break;
             }
 
-            agent.SetDestination(target.position);
-            agent.isStopped = false;
             yield return null;
         }
-        while (startTime + attackTime > Time.time);
+        while (startTime + pickUpTime > Time.time);
 
-        Debug.Log("hit");
-        EventCoordinator.TriggerEvent(EventName.System.Environment.Damage(), GameMessage.Write().WithTargetTransform(target));
-        StartCoroutine(Attack());
+        Debug.Log("pick up");
+        EventCoordinator.TriggerEvent(EventName.System.Environment.PickUpLoot(), GameMessage.Write().WithTargetTransform(target));
+        Reevaluate();
     }
 }
