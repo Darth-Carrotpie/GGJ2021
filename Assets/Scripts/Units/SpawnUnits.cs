@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SpawnUnits : MonoBehaviour
 {
@@ -44,12 +45,31 @@ public class SpawnUnits : MonoBehaviour
 
     Vector3 GetRandomPoint()
     {
-        int xRandom = 0;
+        /*int xRandom = 0;
         int zRandom = 0;
 
         xRandom = (int)Random.Range(-5, 5);
         zRandom = (int)Random.Range(-5, 5);
-
+        
         return new Vector3(xRandom, 0.0f, zRandom) + transform.position;
+        */
+        Vector3 newPos = RandomNavSphere(transform.position, 10, -1);
+
+        return newPos + transform.position;
+    }
+    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) 
+    {
+        Vector3 randDirection = Random.insideUnitCircle * dist;
+
+        randDirection += origin;
+
+        NavMeshHit navHit;
+ 
+        if (NavMesh.SamplePosition(randDirection, out navHit, dist, layermask))
+        {
+            return navHit.position;
+        }
+        return Vector3.zero;
+        //NavMesh.FindClosestEdge(randDirection, out navHit, -1);  
     }
 }
