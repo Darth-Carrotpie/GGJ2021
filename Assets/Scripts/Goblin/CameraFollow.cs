@@ -8,7 +8,9 @@ public class CameraFollow : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        target = FindObjectOfType<PlayerMovementHandler>().transform;
+        PlayerMovementHandler player = FindObjectOfType<PlayerMovementHandler>();
+        if (player != null)
+            target = FindObjectOfType<PlayerMovementHandler>().transform;
         if (target == null)
             target = FindObjectOfType<HeroBehaviour>().transform;
         offset = transform.position - target.position;
