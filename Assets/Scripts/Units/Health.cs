@@ -10,11 +10,6 @@ public class Health : MonoBehaviour
          EventCoordinator.StartListening(EventName.System.Environment.Damage(), GetDamage);
     }
 
-    // Update is called once per frame
-    void Update()
-    {       
-    }
-
     void GetDamage(GameMessage msg)
     {
         if (gameObject.transform == msg.targetTransform)

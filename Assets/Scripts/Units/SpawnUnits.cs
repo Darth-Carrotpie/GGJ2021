@@ -24,6 +24,8 @@ public class SpawnUnits : MonoBehaviour
         {
             GameObject tmp = Instantiate(go);
             
+            tmp.transform.SetParent(transform.parent);
+
             Vector3 randomPoint = GetRandomPoint();
             tmp.gameObject.transform.position = new Vector3(randomPoint.x, tmp.transform.position.y, randomPoint.z);
 
