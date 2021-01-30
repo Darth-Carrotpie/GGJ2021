@@ -2,48 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelCoordinator : MonoBehaviour, HeroVision
+public class LevelCoordinator : Singleton<LevelCoordinator>
 {
-    public Transform  playerTransform;
-    public Transform  heroTransform;
-    List<Transform> lootTransform = new List<Transform>();
-    List<Transform> mobTransform = new List<Transform>();
+    public Transform playerTransform;
+    public Transform heroTransform;
+    public List<Transform> lootTransforms = new List<Transform>();
+    public List<Transform> mobTransforms = new List<Transform>();
 
-    public Transform GetPlayer()
+    public static Transform GetPlayer()
     {
-        return playerTransform;
-    }
-    public Transform GetClosestLoot()
-    {
-        if (lootTransform.Count == 0)
-        {
-            return null;
-        }
-        return lootTransform[0];
-    }
-    public Transform GetClosestMob()
-    {
-        if (mobTransform.Count == 0)
-        {
-            return null;
-        }
-        return mobTransform[0];
+        return Instance.playerTransform;
     }
 
-    void Awake()
+    public static Transform GetClosestLoot(Transform from)
     {
-        heroTransform.GetComponent<HeroBehaviour>().vision = this;
-
-        EventCoordinator.StartListening(EventName.System.Environment.CreateLoot(), OnLootSpawn);
-
-        EventCoordinator.StartListening(EventName.System.Environment.CreateMob(), OnMobSpawn);
+        return Instance.lootTransforms.FindNearest(from);
     }
-    void OnLootSpawn(GameMessage msg)
+
+    public static Transform GetClosestMob(Transform from)
     {
-        lootTransform.Add(msg.targetTransform);
-    }
-    void OnMobSpawn(GameMessage msg)
-    {
-        mobTransform.Add(msg.targetTransform);
+        return Instance.mobTransforms.FindNearest(from);
     }
 }

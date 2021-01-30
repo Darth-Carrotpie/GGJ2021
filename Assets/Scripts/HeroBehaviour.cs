@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public interface HeroVision
-{
-    Transform GetPlayer();
-    Transform GetClosestLoot();
-    Transform GetClosestMob();
-}
-
 [RequireComponent(typeof(NavMeshAgent))]
 public class HeroBehaviour : MonoBehaviour
 {
@@ -35,8 +28,6 @@ public class HeroBehaviour : MonoBehaviour
     public float attackRadius = 2;
     [Tooltip("Interval between attacks")]
     public float attackTime = 1;
-    [Tooltip("Gives targets to the hero")]
-    public HeroVision vision;
 
     bool CanSee(Transform t)
     {
@@ -50,9 +41,9 @@ public class HeroBehaviour : MonoBehaviour
 
     void ReevaluateTarget()
     {
-        var player = vision.GetPlayer();
-        var loot = vision.GetClosestLoot();
-        var mob = vision.GetClosestMob();
+        var player = LevelCoordinator.GetPlayer();
+        var loot = LevelCoordinator.GetClosestLoot(transform);
+        var mob = LevelCoordinator.GetClosestMob(transform);
 
         if (player == null)
         {

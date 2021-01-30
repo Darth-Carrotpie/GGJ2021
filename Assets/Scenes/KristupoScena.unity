@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 383848990}
   - component: {fileID: 383848989}
   - component: {fileID: 383848993}
+  - component: {fileID: 383848994}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -348,6 +349,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1249cae35f9fbea4baff4c4281be869d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &383848994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383848988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8775081c83139409d9ed5857dbfb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &536356620
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +582,7 @@ GameObject:
   - component: {fileID: 1033442234}
   - component: {fileID: 1033442233}
   - component: {fileID: 1033442232}
+  - component: {fileID: 1033442235}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -652,6 +667,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033442230}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1033442235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033442230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8775081c83139409d9ed5857dbfb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!1 &1073707584
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +786,8 @@ GameObject:
   - component: {fileID: 1110363186}
   - component: {fileID: 1110363189}
   - component: {fileID: 1110363185}
+  - component: {fileID: 1110363190}
+  - component: {fileID: 1110363191}
   m_Layer: 0
   m_Name: Zombi
   m_TagString: Untagged
@@ -853,6 +883,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c671779ae6cc6db4f8c38890bbc54247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1110363190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110363184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8775081c83139409d9ed5857dbfb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 3
+--- !u!114 &1110363191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110363184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6197ab19c8170a4893cf3f85a6acb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1238557744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -920,6 +975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1567705038}
   - component: {fileID: 1567705037}
+  - component: {fileID: 1567705039}
   m_Layer: 0
   m_Name: Testas
   m_TagString: Untagged
@@ -939,10 +995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e27ca856eda9f48b87f81e7f8513bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 383848992}
-  loot: {fileID: 1033442231}
-  mob: {fileID: 1110363188}
-  hero: {fileID: 1757054908}
 --- !u!4 &1567705038
 Transform:
   m_ObjectHideFlags: 0
@@ -957,6 +1009,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1567705039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567705036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9636647b5ae64b8ce1f3ccd52ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _persistent: 0
+  playerTransform: {fileID: 0}
+  heroTransform: {fileID: 0}
+  lootTransforms: []
+  mobTransforms: []
 --- !u!1 &1757054903
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +1040,7 @@ GameObject:
   - component: {fileID: 1757054904}
   - component: {fileID: 1757054909}
   - component: {fileID: 1757054908}
+  - component: {fileID: 1757054910}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -1093,3 +1163,16 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1757054910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757054903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8775081c83139409d9ed5857dbfb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
