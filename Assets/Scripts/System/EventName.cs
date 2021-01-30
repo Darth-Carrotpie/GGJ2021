@@ -28,7 +28,7 @@ public class EventName {
         public static List<string> Get() {
             return new List<string> {
                     Tap(),
-                    StartGame(),
+                    StartGame()
                 }
                 .Concat(Menus.Get())
                 .Concat(Player.Get())
@@ -53,7 +53,8 @@ public class EventName {
             public static string ArenaAnimated() { return "System_Environment_ArenaAnimated"; }
             public static string ScrollScoresOut() { return "System_Environment_ScrollScoresOut"; }
             public static string CleanScene() { return "System_Environment_CleanScene"; }
-            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), DestroyArena(), ArenaDestroyed(), ArenaAnimating(), PlayfieldAnimated(), ArenaAnimated(), CleanScene() }; }
+            public static string Damage() { return "Input_Damage"; }
+            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), DestroyArena(), ArenaDestroyed(), ArenaAnimating(), PlayfieldAnimated(), ArenaAnimated(), CleanScene(), Damage() }; }
         }
         public class Player {
             public static string ProfileCreated() { return "System_ProfileCreated"; }

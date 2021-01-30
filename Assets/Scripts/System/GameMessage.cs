@@ -48,4 +48,10 @@ public class GameMessage {
         return this;
     }
 
+    public Transform targetTransform;
+    public GameMessage WithTargetTransform(Transform value) {
+        targetTransform = value;
+        return this;
+    }
+
 }
