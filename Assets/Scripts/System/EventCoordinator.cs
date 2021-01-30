@@ -58,6 +58,7 @@ public class EventCoordinator : Singleton<EventCoordinator> {
         List<string> ignoreList = new List<string>();
         if (Instance.enableDebugging == true) {
             //ignoreList.Add(EventName.System.Sheep.Roam());
+            ignoreList.Add(EventName.Input.Player.Move());
 
         }
         UnityGameEvent thisEvent = null;

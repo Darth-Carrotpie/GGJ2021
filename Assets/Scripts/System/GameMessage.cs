@@ -53,5 +53,9 @@ public class GameMessage {
         targetTransform = value;
         return this;
     }
-
+    public ChestEntity targetChest;
+    public GameMessage WithChest(ChestEntity value) {
+        targetChest = value;
+        return this;
+    }
 }

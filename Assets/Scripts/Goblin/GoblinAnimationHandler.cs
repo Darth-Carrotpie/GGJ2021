@@ -7,7 +7,7 @@ public class GoblinAnimationHandler : MonoBehaviour {
     void Start() {
         animator = GetComponent<Animator>();
         EventCoordinator.StartListening(EventName.Input.Player.Move(), OnMoveEvent);
-        EventCoordinator.StartListening(EventName.Input.Player.OpenChest(), OnOpenChest);
+        EventCoordinator.StartListening(EventName.System.Economy.ChestWasOpened(), OnOpenChest);
         EventCoordinator.StartListening(EventName.Input.Player.StartChannelingPortal(), OnPortalStart);
         EventCoordinator.StartListening(EventName.Input.Player.StopChannelingPortal(), OnPortalStop);
         EventCoordinator.StartListening(EventName.Input.Player.MovementStopped(), OnMoveStop);

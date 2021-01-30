@@ -38,11 +38,11 @@ public class EventName {
     }
     public class System {
         public class Economy {
-            public static string EatGrass() { return "Economy_EatGrass"; }
+            public static string ChestWasOpened() { return "Economy_ChestWasOpened"; }
             public static string GrassChanged() { return "Economy_GrassChanged"; } // should be under Playfield
             public static string GoldChanged() { return "Economy_GoldChanged"; }
             public static string ComboChanged() { return "Economy_ComboChanged"; }
-            public static List<string> Get() { return new List<string> { GrassChanged(), GoldChanged(), EatGrass(), ComboChanged() }; }
+            public static List<string> Get() { return new List<string> { GrassChanged(), GoldChanged(), ChestWasOpened(), ComboChanged() }; }
         }
         public class Environment {
             public static string Initialized() { return "System_Environment_Initialized"; }

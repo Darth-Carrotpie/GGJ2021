@@ -8,6 +8,7 @@ public class PlayerMovementHandler : MonoBehaviour {
     public float baseSpeed = 0.1f;
     float speed = 0f;
     bool stopTrigger = false;
+    bool isMoving;
     void Start() {
         EventCoordinator.StartListening(EventName.Input.Player.Move(), OnMoveEvent);
     }
@@ -17,6 +18,7 @@ public class PlayerMovementHandler : MonoBehaviour {
     void Update() {
         if (moveDirection.magnitude > 0) {
             previousMoveDirection = moveDirection;
+            isMoving = true;
             if (speed < 1f)
                 speed += Time.deltaTime * 4f;
         } else {
@@ -24,7 +26,7 @@ public class PlayerMovementHandler : MonoBehaviour {
                 speed -= Time.deltaTime * 4f;
 
             if (speed <= 0) {
-                stopTrigger = true;
+                isMoving = false;
             }
         }
         if (speed > 0) {
@@ -32,9 +34,10 @@ public class PlayerMovementHandler : MonoBehaviour {
             transform.Translate(previousMoveDirection * actual * baseSpeed);
         }
 
-        if (stopTrigger) {
-            stopTrigger = false;
-            EventCoordinator.TriggerEvent(EventName.Input.Player.MovementStopped(), GameMessage.Write());
+        if (isMoving != stopTrigger) {
+            stopTrigger = isMoving;
+            if (!isMoving)
+                EventCoordinator.TriggerEvent(EventName.Input.Player.MovementStopped(), GameMessage.Write());
         }
     }
 }
