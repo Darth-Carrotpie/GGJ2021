@@ -14,6 +14,8 @@ public class HeroBehaviour : MonoBehaviour
     }
 
     NavMeshAgent agent;
+    Animator animator;
+    private State previousState = State.MobAggro;
     private State state = State.MobAggro;
     // Player/Loot/Mob, if null: immediate reevaluation
     private Transform target;
@@ -117,11 +119,13 @@ public class HeroBehaviour : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponentInChildren<Animator>();
         StartCoroutine(Wait());
     }
 
     IEnumerator Chase()
     {
+        animator.SetInteger("state", 1);
         // Walk animation
         float startTime = Time.time;
 
@@ -157,6 +161,7 @@ public class HeroBehaviour : MonoBehaviour
 
     IEnumerator Wait()
     {
+        animator.SetInteger("state", 0);
         // Wait animation
         float startTime = Time.time;
         agent.isStopped = true;
@@ -171,6 +176,7 @@ public class HeroBehaviour : MonoBehaviour
 
     IEnumerator Attack()
     {
+        animator.SetInteger("state", 3);
         // Attack animation
         float startTime = Time.time;
 
@@ -196,6 +202,7 @@ public class HeroBehaviour : MonoBehaviour
 
     IEnumerator PickUpLoot()
     {
+        animator.SetInteger("state", 2);
         // PickUp animation
         float startTime = Time.time;
 
