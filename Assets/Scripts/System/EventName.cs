@@ -53,8 +53,10 @@ public class EventName {
             public static string ArenaAnimated() { return "System_Environment_ArenaAnimated"; }
             public static string ScrollScoresOut() { return "System_Environment_ScrollScoresOut"; }
             public static string CleanScene() { return "System_Environment_CleanScene"; }
-            public static string Damage() { return "Input_Damage"; }
-            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), DestroyArena(), ArenaDestroyed(), ArenaAnimating(), PlayfieldAnimated(), ArenaAnimated(), CleanScene(), Damage() }; }
+            public static string Damage() { return "System_Environment_Damage"; }
+            public static string CreateLoot() { return "System_Environment_CreateLoot"; }
+            public static string CreateMob() { return "System_Environment_CreateMob"; }
+            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), DestroyArena(), ArenaDestroyed(), ArenaAnimating(), PlayfieldAnimated(), ArenaAnimated(), CleanScene(), Damage(), CreateLoot(), CreateMob()}; }
         }
         public class Player {
             public static string ProfileCreated() { return "System_ProfileCreated"; }

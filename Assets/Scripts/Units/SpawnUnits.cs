@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class SpawnUnits : MonoBehaviour
 {
+    public enum SpawnType{
+        Mob, Loot
+    };
+    public SpawnType spawnType;
     public GameObject spawnPrefab;
     public int count;
     // Start is called before the first frame update
     void Start()
     {
         GenerateObject(spawnPrefab, count);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void GenerateObject(GameObject go, int amount)
@@ -27,7 +25,17 @@ public class SpawnUnits : MonoBehaviour
             GameObject tmp = Instantiate(go);
             
             Vector3 randomPoint = GetRandomPoint();
-            tmp.gameObject.transform.position = new Vector3(randomPoint.x, tmp.transform.position.y, randomPoint.z); 
+            tmp.gameObject.transform.position = new Vector3(randomPoint.x, tmp.transform.position.y, randomPoint.z);
+
+            if (spawnType == SpawnType.Mob)
+            {
+                EventCoordinator.TriggerEvent(EventName.System.Environment.CreateMob(), GameMessage.Write().WithTargetTransform(tmp.transform));
+            }
+            else
+            {
+                EventCoordinator.TriggerEvent(EventName.System.Environment.CreateLoot(), GameMessage.Write().WithTargetTransform(tmp.transform));
+            }
+            
         }
     }
 
