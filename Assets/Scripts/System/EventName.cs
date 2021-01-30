@@ -17,10 +17,11 @@ public class EventName {
         }
         public class Player {
             public static string Move() { return "Player_Move"; }
+            public static string MovementStopped() { return "Player_MovementStopped"; }
             public static string StartChannelingPortal() { return "Player_StartChannelingPortal"; }
             public static string StopChannelingPortal() { return "Player_StopChannelingPortal"; }
             public static string OpenChest() { return "Player_OpenChest"; }
-            public static List<string> Get() { return new List<string> { Move(), StartChannelingPortal(), StopChannelingPortal(), OpenChest() }; }
+            public static List<string> Get() { return new List<string> { Move(), MovementStopped(), StartChannelingPortal(), StopChannelingPortal(), OpenChest() }; }
         }
         public static string Tap() { return "Input_Tap"; }
         public static string StartGame() { return "Input_StartGame"; }
@@ -56,7 +57,7 @@ public class EventName {
             public static string Damage() { return "System_Environment_Damage"; }
             public static string CreateLoot() { return "System_Environment_CreateLoot"; }
             public static string CreateMob() { return "System_Environment_CreateMob"; }
-            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), DestroyArena(), ArenaDestroyed(), ArenaAnimating(), PlayfieldAnimated(), ArenaAnimated(), CleanScene(), Damage(), CreateLoot(), CreateMob()}; }
+            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), DestroyArena(), ArenaDestroyed(), ArenaAnimating(), PlayfieldAnimated(), ArenaAnimated(), CleanScene(), Damage(), CreateLoot(), CreateMob() }; }
         }
         public class Player {
             public static string ProfileCreated() { return "System_ProfileCreated"; }
