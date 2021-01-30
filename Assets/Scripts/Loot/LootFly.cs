@@ -20,8 +20,8 @@ public class LootFly : MonoBehaviour {
         destinationPosition += transform.position;
         startingPosition = transform.position;
         height = height + Random.Range(0.1f, 0.2f) + Mathf.Abs(destinationPosition.x) / 2f;
-        p1Position = new Vector3(startingPosition.x, height, 0);
-        p2Position = new Vector3(destinationPosition.x, height, 0);
+        p1Position = new Vector3(startingPosition.x, height, height / 2f);
+        p2Position = new Vector3(destinationPosition.x, height, height / 2f);
         rotationSpeed = Random.Range(-2, 2);
         rotationSpeed = Mathf.Sign(rotationSpeed) * maxRotationSpeed;
     }
