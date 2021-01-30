@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MobMovement : MonoBehaviour
 {
-    public float wanderRadius;
+    public float wanderRadius = 10;
     private float timer;
     private float movementDuration = 5.0f;
     private float waitBeforeMoving = 0.05f;

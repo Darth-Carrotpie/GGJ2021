@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject blood;
     void Start()
     {
-         EventCoordinator.StartListening(EventName.System.Environment.Damage(), GetDamage);
+        EventCoordinator.StartListening(EventName.System.Environment.Damage(), GetDamage);
     }
 
+    void Update()//For testing
+    {
+        if (Input.GetKeyDown("p"))
+        {
+            EventCoordinator.TriggerEvent(EventName.System.Environment.MobKilled(), GameMessage.Write().WithTargetTransform(gameObject.transform));
+
+            Destroy(gameObject);
+        }
+    }
     void GetDamage(GameMessage msg)
     {
         if (gameObject.transform == msg.targetTransform)
         {
+            EventCoordinator.TriggerEvent(EventName.System.Environment.MobKilled(), GameMessage.Write().WithTargetTransform(gameObject.transform));
+
             Destroy(gameObject);
         }
     }
