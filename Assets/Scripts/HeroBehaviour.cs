@@ -22,7 +22,6 @@ public class HeroBehaviour : MonoBehaviour
 
     NavMeshAgent agent;
     private State state = State.MobAggro;
-    private float reevaluateAt;
     // Player/Loot/Mob, if null: immediate reevaluation
     private Transform target;
 
@@ -32,6 +31,10 @@ public class HeroBehaviour : MonoBehaviour
     public float thinkingDuration = 0.5f;
     [Tooltip("At what distance will the hero aggro on player or loot")]
     public float sightRadius = 5;
+    [Tooltip("At what distance hero will start attacking")]
+    public float attackRadius = 2;
+    [Tooltip("Interval between attacks")]
+    public float attackTime = 1;
     [Tooltip("Gives targets to the hero")]
     public HeroVision vision;
 
@@ -40,12 +43,22 @@ public class HeroBehaviour : MonoBehaviour
         return Vector3.Distance(transform.position, t.position) < sightRadius;
     }
 
+    bool CanAttack(Transform t)
+    {
+        return Vector3.Distance(transform.position, t.position) < attackRadius;
+    }
+
     void ReevaluateTarget()
     {
         var player = vision.GetPlayer();
         var loot = vision.GetClosestLoot();
         var mob = vision.GetClosestMob();
-        Debug.Assert(player != null, "Player should always be defined when calling Reevaluate");
+
+        if (player == null)
+        {
+            Debug.LogWarning("No player found, player ded or scene was not initialised correctly");
+            return;
+        }
 
         if (state == State.PlayerAggro)
         {
@@ -75,7 +88,7 @@ public class HeroBehaviour : MonoBehaviour
         }
 
         // If there is no more mobs on the map, always targets player unless there is loot
-        if (CanSee(player) || mob is null)
+        if (CanSee(player) || mob == null)
         {
             state = State.PlayerAggro;
             target = player;
@@ -93,7 +106,8 @@ public class HeroBehaviour : MonoBehaviour
     void Reevaluate()
     {
         ReevaluateTarget();
-        reevaluateAt = Time.time + aggroDuration;
+        StartCoroutine(Chase());
+        Debug.Log("reevaluated to " + state + target);
     }
 
     // Start is called before the first frame update
@@ -103,30 +117,72 @@ public class HeroBehaviour : MonoBehaviour
         Reevaluate();
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator Chase()
     {
-        if (reevaluateAt < Time.time)
-        {
-            Reevaluate();
-        }
+        float startTime = Time.time;
 
-        if (target != null)
+        do
         {
+            if (target == null)
+            {
+                StartCoroutine(Wait());
+                yield break;
+            }
+
+            // Attack both player both loot
+            if (state != State.LootAggro && CanAttack(target))
+            {
+                StartCoroutine(Attack());
+                yield break;
+            }
+
             agent.SetDestination(target.position);
             agent.isStopped = false;
+            yield return null;
         }
-        else
+        while (startTime + aggroDuration > Time.time);
+        Reevaluate();
+    }
+
+    IEnumerator Wait()
+    {
+        float startTime = Time.time;
+
+        do
         {
-            agent.isStopped = true;
+            yield return null;
         }
+        while (startTime + aggroDuration > Time.time);
+        Reevaluate();
+    }
+
+    IEnumerator Attack()
+    {
+        float startTime = Time.time;
+
+        do
+        {
+            if (target == null)
+            {
+                StartCoroutine(Wait());
+                yield break;
+            }
+
+            agent.SetDestination(target.position);
+            agent.isStopped = false;
+            yield return null;
+        }
+        while (startTime + attackTime > Time.time);
+
+        Debug.Log("hit");
+        EventCoordinator.TriggerEvent(EventName.System.Environment.Damage(), GameMessage.Write().WithTargetTransform(target));
+        StartCoroutine(Attack());
     }
 
     // Stop AI
     void OnPlayerKilled()
     {
         target = null;
-        reevaluateAt = float.PositiveInfinity;
     }
 
     void OnLootPickedUp(Transform loot)
@@ -134,7 +190,6 @@ public class HeroBehaviour : MonoBehaviour
         if (loot == target)
         {
             target = null;
-            reevaluateAt = Time.time + thinkingDuration;
         }
     }
 
@@ -143,7 +198,6 @@ public class HeroBehaviour : MonoBehaviour
         if (mob == target)
         {
             target = null;
-            reevaluateAt = Time.time + thinkingDuration;
         }
     }
 }
