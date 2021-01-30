@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    int health = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +17,7 @@ public class Health : MonoBehaviour
 
     void GetDamage(GameMessage msg)
     {
-        print("Got damage");
-        health -= 50;
-
-        if (health == 0)
+        if (gameObject.transform == msg.targetTransform)
         {
             Destroy(gameObject);
         }

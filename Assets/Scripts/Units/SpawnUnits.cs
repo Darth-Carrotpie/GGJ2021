@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SpawnUnits : MonoBehaviour
 {
-    public GameObject zombie;
-    public int numberOfZombies;
+    public GameObject spawnPrefab;
+    public int count;
     // Start is called before the first frame update
     void Start()
     {
-        GenerateObject(zombie, numberOfZombies);
+        GenerateObject(spawnPrefab, count);
     }
 
     // Update is called once per frame
@@ -39,6 +39,6 @@ public class SpawnUnits : MonoBehaviour
         xRandom = (int)Random.Range(-5, 5);
         zRandom = (int)Random.Range(-5, 5);
 
-        return new Vector3(xRandom, 0.0f, zRandom);
+        return new Vector3(xRandom, 0.0f, zRandom) + transform.position;
     }
 }
