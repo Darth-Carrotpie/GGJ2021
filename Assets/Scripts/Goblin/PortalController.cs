@@ -18,10 +18,15 @@ public class PortalController : MonoBehaviour {
         goblin = FindObjectOfType<PlayerMovementHandler>().transform;
         EventCoordinator.StartListening(EventName.Input.Player.StartChannelingPortal(), OnStartPortal);
         EventCoordinator.StartListening(EventName.Input.Player.StopChannelingPortal(), OnStopPortal);
+        EventCoordinator.StartListening(EventName.System.Victory(), OnVictory);
     }
     void OnDestroy() {
         EventCoordinator.StopListening(EventName.Input.Player.StartChannelingPortal(), OnStartPortal);
         EventCoordinator.StopListening(EventName.Input.Player.StopChannelingPortal(), OnStopPortal);
+        EventCoordinator.StopListening(EventName.System.Victory(), OnVictory);
+    }
+    void OnVictory(GameMessage msg) {
+        DestroyCurrentPortal();
     }
     void OnStartPortal(GameMessage msg) {
         trigger = true;
@@ -81,7 +86,7 @@ public class PortalController : MonoBehaviour {
         return playerPosition; // + Vector3.forward * 0.2f;
     }
     void SetProgress(PortalEntity portal, float progress) {
-        portal.SetPortalProgress(progress);
+        EventCoordinator.TriggerEvent(EventName.System.Economy.PortalProgress(), GameMessage.Write().WithFloatMessage(progress).WithPortal(portal));
     }
     void DestroyPortal(PortalEntity portal) {
         portal.DestroyPortal();

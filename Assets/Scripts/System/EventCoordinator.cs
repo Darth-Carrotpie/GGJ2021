@@ -59,6 +59,7 @@ public class EventCoordinator : Singleton<EventCoordinator> {
         if (Instance.enableDebugging == true) {
             //ignoreList.Add(EventName.System.Sheep.Roam());
             ignoreList.Add(EventName.Input.Player.Move());
+            ignoreList.Add(EventName.System.Economy.PortalProgress());
 
         }
         UnityGameEvent thisEvent = null;

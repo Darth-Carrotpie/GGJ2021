@@ -58,4 +58,9 @@ public class GameMessage {
         targetChest = value;
         return this;
     }
+    public PortalEntity targetPortal;
+    public GameMessage WithPortal(PortalEntity value) {
+        targetPortal = value;
+        return this;
+    }
 }

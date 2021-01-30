@@ -12,6 +12,7 @@ public class PortalEntity : MonoBehaviour {
     void Start() {
         if (rend == null)
             rend = GetComponentInChildren<SpriteRenderer>();
+        EventCoordinator.StartListening(EventName.System.Economy.PortalProgress(), OnProgress);
     }
 
     void Update() {
@@ -32,13 +33,14 @@ public class PortalEntity : MonoBehaviour {
             }
         }
     }
-    public void SetPortalProgress(float progress) {
-        Debug.Log("setting progress");
+    void OnProgress(GameMessage msg) {
+        SetPortalProgress(msg.floatMessage);
+    }
+    void SetPortalProgress(float progress) {
         currentProgress = 1 - progress;
         rend.material.SetFloat("FillLevelA", currentProgress);
         rend.material.SetFloat("FillLevelB", 0);
         if (currentProgress <= 0) {
-            DestroyPortal();
             EventCoordinator.TriggerEvent(EventName.System.Victory(), GameMessage.Write().WithCoordinates(transform.position));
         }
 
