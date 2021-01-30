@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnUnits : MonoBehaviour
 {
-    public enum SpawnType{
+    public enum SpawnType
+    {
         Mob, Loot
     };
     public SpawnType spawnType;
@@ -17,13 +18,13 @@ public class SpawnUnits : MonoBehaviour
     }
 
     void GenerateObject(GameObject go, int amount)
-    {        
+    {
         if (go == null) return;
 
-        for(int i = 0; i < amount; i++)
+        for (int i = 0; i < amount; i++)
         {
             GameObject tmp = Instantiate(go);
-            
+
             Vector3 randomPoint = GetRandomPoint();
             tmp.gameObject.transform.position = new Vector3(randomPoint.x, tmp.transform.position.y, randomPoint.z);
 
@@ -35,7 +36,7 @@ public class SpawnUnits : MonoBehaviour
             {
                 EventCoordinator.TriggerEvent(EventName.System.Environment.CreateLoot(), GameMessage.Write().WithTargetTransform(tmp.transform));
             }
-            
+
         }
     }
 
