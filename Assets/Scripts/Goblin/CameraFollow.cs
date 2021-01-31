@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CameraFollow : MonoBehaviour {
     Transform target;
     public float smoothing = 5f;
@@ -23,6 +23,9 @@ public class CameraFollow : MonoBehaviour {
         transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
     }
     void OnVictory(GameMessage msg) {
-        target = FindObjectOfType<HeroBehaviour>().transform;
+        VictoryCoordinator.SetVictory();
+        SceneManager.LoadScene("Post", LoadSceneMode.Single);
+
+        //target = FindObjectOfType<HeroBehaviour>().transform;
     }
 }
