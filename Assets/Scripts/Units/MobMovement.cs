@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class MobMovement : MonoBehaviour
 {
     public float wanderRadius = 10;
     private float timer;
     private float movementDuration = 5.0f;
-    private float waitBeforeMoving = 0.05f;
+    private float waitBeforeMoving = 1.0f;
     private bool hasArrived = false;
+    public UnityEvent onWalk;
+    public UnityEvent onStop;
  
     private void Update()
     {
@@ -25,6 +28,7 @@ public class MobMovement : MonoBehaviour
     {
         float timer = 0.0f;
         Vector3 startPos = transform.position;
+        onWalk.Invoke();
  
         while (timer < movementDuration)
         {
@@ -37,6 +41,7 @@ public class MobMovement : MonoBehaviour
             yield return null;
         }
  
+        onStop.Invoke();
         yield return new WaitForSeconds(waitBeforeMoving);
         hasArrived = false;
     }
