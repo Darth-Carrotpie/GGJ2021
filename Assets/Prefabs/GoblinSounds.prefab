@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 6433678338983384028}
   - component: {fileID: 6433678338983384031}
   - component: {fileID: 6433678338983384030}
+  - component: {fileID: -6833017640970504283}
+  - component: {fileID: -871335311940985937}
+  - component: {fileID: -7995689660599995020}
+  - component: {fileID: -8159606135513110126}
   m_Layer: 0
   m_Name: GoblinSounds
   m_TagString: Untagged
@@ -141,11 +145,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: bfd93bd22b5c4a4469beea49bd2d47b2, type: 3}
-  - {fileID: 8300000, guid: 3f4a83de5705175489043a95335f08f1, type: 3}
-  - {fileID: 8300000, guid: 3fe94c6e92a712746bef1c7418eb3ad7, type: 3}
-  - {fileID: 8300000, guid: f693b73a2fb56a541b8eca11627fc06e, type: 3}
-  - {fileID: 8300000, guid: e032856efedb7cc4ba64e8c87545ba92, type: 3}
-  - {fileID: 8300000, guid: 18c601c7ba7737644bf2a027dead324c, type: 3}
-  - {fileID: 8300000, guid: 0a84e1b52292202469e5aa29d9b7da86, type: 3}
+  - {fileID: 8300000, guid: 2385824b8146c1846a5b1f5589a9868c, type: 3}
+  - {fileID: 8300000, guid: 21562cf2043d2f74db9458a1671064fd, type: 3}
+  eventName: System_Environment_GoblinGotDamage
+--- !u!114 &-6833017640970504283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433678338983384017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23bda24a259195418351218838c0df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 9206bd6624679e34d9b4c7a2969cf655, type: 3}
+  - {fileID: 8300000, guid: e9f255a75d1bec9498f942263d8dae25, type: 3}
+  - {fileID: 8300000, guid: cc2cb4e0aab0c8240ac13e00f00a4131, type: 3}
+  - {fileID: 8300000, guid: 3cdfa0890e171ca4589678fc4308f766, type: 3}
   eventName: Player_StartChannelingPortal
+--- !u!114 &-871335311940985937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433678338983384017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23bda24a259195418351218838c0df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 1c5ee8058f7710d4e97cfa54e0b9e164, type: 3}
+  - {fileID: 8300000, guid: f6e678add364ef14eac3e223d14f7a1d, type: 3}
+  - {fileID: 8300000, guid: aaa34eac6eb2ce54180728041e1dc997, type: 3}
+  - {fileID: 8300000, guid: 3755e1b0db211c048984d14af16a1294, type: 3}
+  - {fileID: 8300000, guid: 5dfc7b52ea23c6540beedcc0a7db1006, type: 3}
+  eventName: Player_OpenChest
+--- !u!114 &-7995689660599995020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433678338983384017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23bda24a259195418351218838c0df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 1cf81e49729a4a948a41a66a51981bb5, type: 3}
+  eventName: Player_ThrowLoot
+--- !u!114 &-8159606135513110126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433678338983384017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23bda24a259195418351218838c0df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 4ed84aece0da7ff4b82f979370a24a88, type: 3}
+  eventName: System_Environment_GoblinDied

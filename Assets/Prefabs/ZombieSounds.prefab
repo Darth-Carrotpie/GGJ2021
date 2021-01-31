@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5290320150348149845
+--- !u!1 &3737761220017963231
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5290320150348149848}
-  - component: {fileID: 5290320150348149851}
-  - component: {fileID: 5290320150348149850}
-  - component: {fileID: 4842498600734225408}
-  - component: {fileID: 2475245021534586271}
+  - component: {fileID: 5022053152467597647}
+  - component: {fileID: 4175798055922771436}
+  - component: {fileID: 7756877805347637054}
   m_Layer: 0
-  m_Name: BarbarianSounds
+  m_Name: ZombieSounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5290320150348149848
+--- !u!4 &5022053152467597647
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5290320150348149845}
+  m_GameObject: {fileID: 3737761220017963231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &5290320150348149851
+--- !u!82 &4175798055922771436
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5290320150348149845}
+  m_GameObject: {fileID: 3737761220017963231}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 0d70ba32e4f4fd4479ddfb1170399e54, type: 2}
@@ -130,59 +128,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5290320150348149850
+--- !u!114 &7756877805347637054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5290320150348149845}
+  m_GameObject: {fileID: 3737761220017963231}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b23bda24a259195418351218838c0df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 2dde97598af5c654baa535b72fb3b35e, type: 3}
-  - {fileID: 8300000, guid: 44a23d045ede0b24a9a7dec1afccf6d9, type: 3}
-  - {fileID: 8300000, guid: 1f8bf74c9c93e2d4bb8175430fc7a6c9, type: 3}
-  eventName: System_Environment_GoblinDied
---- !u!114 &4842498600734225408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5290320150348149845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b23bda24a259195418351218838c0df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 3cdfa0890e171ca4589678fc4308f766, type: 3}
-  - {fileID: 8300000, guid: 9206bd6624679e34d9b4c7a2969cf655, type: 3}
-  - {fileID: 8300000, guid: e9f255a75d1bec9498f942263d8dae25, type: 3}
-  - {fileID: 8300000, guid: cc2cb4e0aab0c8240ac13e00f00a4131, type: 3}
+  - {fileID: 8300000, guid: cd75244667b2eda49b47a741998f52a0, type: 3}
+  - {fileID: 8300000, guid: f51e8a59d16a8c64cb9696f755bbb878, type: 3}
+  - {fileID: 8300000, guid: e1fee82094dc47e4a8308a7174235c85, type: 3}
+  - {fileID: 8300000, guid: 218717fb2c09a834f9c2167d19837ac9, type: 3}
+  - {fileID: 8300000, guid: 7159c10a6ff164e4fa1a71f9677e44f3, type: 3}
+  - {fileID: 8300000, guid: bd3edac19e34af14c84b5d1536f959b2, type: 3}
+  - {fileID: 8300000, guid: 34c25982087c8b14f9c6aa1a01d232c0, type: 3}
+  - {fileID: 8300000, guid: 03390699228191841a2337435ba8c310, type: 3}
+  - {fileID: 8300000, guid: 536e50fef31f2e54eb7160179ea9c008, type: 3}
   eventName: System_Environment_MobKilled
---- !u!114 &2475245021534586271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5290320150348149845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b23bda24a259195418351218838c0df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 3f4a83de5705175489043a95335f08f1, type: 3}
-  - {fileID: 8300000, guid: 3fe94c6e92a712746bef1c7418eb3ad7, type: 3}
-  - {fileID: 8300000, guid: f693b73a2fb56a541b8eca11627fc06e, type: 3}
-  - {fileID: 8300000, guid: e032856efedb7cc4ba64e8c87545ba92, type: 3}
-  - {fileID: 8300000, guid: 18c601c7ba7737644bf2a027dead324c, type: 3}
-  - {fileID: 8300000, guid: 0a84e1b52292202469e5aa29d9b7da86, type: 3}
-  - {fileID: 8300000, guid: bfd93bd22b5c4a4469beea49bd2d47b2, type: 3}
-  eventName: Player_StartChannelingPortal
