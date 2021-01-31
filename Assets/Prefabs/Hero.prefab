@@ -236,12 +236,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aggroDuration: 2
-  thinkingDuration: 0.5
+  thinkingDuration: 0.2
   sightRadius: 5
   attackRange: 2
   attackTime: 1
   pickUpRange: 2
-  pickUpTime: 1
+  pickUpTime: 0.5
 --- !u!114 &5031346171030133687
 MonoBehaviour:
   m_ObjectHideFlags: 0
