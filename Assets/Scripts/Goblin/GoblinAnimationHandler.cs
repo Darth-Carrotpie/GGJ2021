@@ -12,7 +12,7 @@ public class GoblinAnimationHandler : MonoBehaviour {
         EventCoordinator.StartListening(EventName.Input.Player.StopChannelingPortal(), OnPortalStop);
         EventCoordinator.StartListening(EventName.Input.Player.MovementStopped(), OnMoveStop);
         EventCoordinator.StartListening(EventName.Input.Player.ThrowLoot(), OnLootThrow);
-        EventCoordinator.StartListening(EventName.Input.Player.ThrowLoot(), OnGoblinDeath);
+        EventCoordinator.StartListening(EventName.System.Environment.GoblinDied(), OnGoblinDeath);
     }
 
     void OnMoveEvent(GameMessage msg) {
