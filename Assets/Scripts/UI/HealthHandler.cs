@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class HealthHandler : MonoBehaviour {
     Image image;
     private int health = 10;
+    
     void Start() {
         image = GetComponent<Image>();
+        image.fillAmount = 10;
         EventCoordinator.StartListening(EventName.System.Environment.Damage(), OnGoblinGotDamage);
     }
 
