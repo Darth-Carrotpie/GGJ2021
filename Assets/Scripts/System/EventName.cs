@@ -55,7 +55,8 @@ public class EventName {
             public static string PickUpLoot() { return "System_Environment_PickUpLoot"; }
             public static string MobKilled() { return "System_Environment_MobKilled"; }
             public static string GoblinDied() { return "System_Environment_GoblinDied"; }
-            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), CleanScene(), Damage(), CreateLoot(), CreateMob(), PickUpLoot(), MobKilled(), GoblinDied() }; }
+            public static string GoblinGotDamage() { return "System_Environment_GoblinGotDamage"; }
+            public static List<string> Get() { return new List<string> { Initialized(), EndMatch(), CleanScene(), Damage(), CreateLoot(), CreateMob(), PickUpLoot(), MobKilled(), GoblinDied(), GoblinGotDamage() }; }
         }
         public class Player {
             public static string ProfileCreated() { return "System_ProfileCreated"; }

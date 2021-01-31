@@ -658,6 +658,7 @@ GameObject:
   - component: {fileID: 6914603100653108801}
   - component: {fileID: 1114423368227485435}
   - component: {fileID: 12294796622165705}
+  - component: {fileID: -7655391541426627513}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -734,6 +735,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootPrefab: {fileID: 4938041636517510446, guid: 55c6ebee89f2ab24e812ca17f3058de4, type: 3}
   itemSprites: []
+--- !u!114 &-7655391541426627513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6914603100653108804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3b92c972bda2847a3620524bd0f63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7573261948910328806
 GameObject:
   m_ObjectHideFlags: 0
