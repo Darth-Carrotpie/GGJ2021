@@ -5,7 +5,12 @@ using UnityEngine;
 public class PlayerInputController : MonoBehaviour {
 
     public Vector2 currentDir;
-
+    void Start() {
+        EventCoordinator.StartListening(EventName.System.Environment.GoblinDied(), OnGoblinDeath);
+    }
+    void OnGoblinDeath(GameMessage msg) {
+        Destroy(this);
+    }
     void Update() {
         if (Input.GetKeyDown(KeyCode.W)) {
             AddDir(Vector2.up);
