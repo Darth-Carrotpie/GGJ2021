@@ -15,13 +15,10 @@ public class Health : MonoBehaviour
 
     void Update()//For testing
     {
-        if (Input.GetKeyDown("p"))
+        /*if (Input.GetKeyDown("p"))
         {
-            /*EventCoordinator.TriggerEvent(EventName.System.Environment.MobKilled(), GameMessage.Write().WithTargetTransform(gameObject.transform));
-
-            Destroy(gameObject);*/
             GetDamage(GameMessage.Write().WithTargetTransform(transform));
-        }
+        }*/
     }
     void GetDamage(GameMessage msg)
     {
