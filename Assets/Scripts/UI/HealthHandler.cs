@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthHandler : MonoBehaviour {
     Image image;
     private int health = 10;
-    
+
     void Start() {
         image = GetComponent<Image>();
         image.fillAmount = 1;
@@ -20,7 +20,7 @@ public class HealthHandler : MonoBehaviour {
 
             if (health == 0) {
                 EventCoordinator.TriggerEvent(EventName.System.Environment.GoblinDied(), GameMessage.Write().WithTargetTransform(gameObject.transform));
-            }   
+            }
         }
     }
 }

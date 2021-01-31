@@ -73,9 +73,9 @@ public class PlayerMovementHandler : MonoBehaviour {
             flatDir = navHit.position - transform.position;
             /*Vector3 incomingVec = navHit.position - transform.position;
             Vector3 reflectVec = Vector3.Reflect(incomingVec, navHit.normal);
-            flatDir = (incomingVec + reflectVec).normalized;
-            Debug.DrawLine(transform.position, navHit.position, Color.red, 3f);
-            Debug.DrawRay(navHit.position, reflectVec, Color.green, 3f);*/
+            flatDir = (incomingVec + reflectVec).normalized;*/
+            Debug.DrawLine(transform.position, navHit.position, Color.blue, 3f);
+
         }
         return flatDir;
     }

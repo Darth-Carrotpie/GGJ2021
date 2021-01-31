@@ -15,7 +15,7 @@ public class TooltipsController : MonoBehaviour {
     void Update() {
         timeCounter += Time.deltaTime;
 
-        if (currentTooltip > tooltips.Count)
+        if (currentTooltip >= tooltips.Count)
             Destroy(gameObject);
 
         if (timeCounter > (tooltipStayLength + tooltipPauseLength) * currentTooltip) {
