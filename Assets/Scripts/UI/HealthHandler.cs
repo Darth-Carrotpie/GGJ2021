@@ -15,7 +15,7 @@ public class HealthHandler : MonoBehaviour {
 
     void OnGoblinGotDamage(GameMessage msg) {
         if (gameObject.transform == msg.targetTransform) {
-            image.fillAmount -= 0.1;
+            image.fillAmount -= 0.1f;
             health -= 1;
 
             if (health == 0) {
