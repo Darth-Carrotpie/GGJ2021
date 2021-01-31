@@ -9,13 +9,13 @@ public class HealthHandler : MonoBehaviour {
     
     void Start() {
         image = GetComponent<Image>();
-        image.fillAmount = 10;
+        image.fillAmount = 1;
         EventCoordinator.StartListening(EventName.System.Environment.Damage(), OnGoblinGotDamage);
     }
 
     void OnGoblinGotDamage(GameMessage msg) {
-        if (transform == msg.targetTransform) {
-            image.fillAmount -= 1;
+        if (gameObject.transform == msg.targetTransform) {
+            image.fillAmount -= 0.1;
             health -= 1;
 
             if (health == 0) {

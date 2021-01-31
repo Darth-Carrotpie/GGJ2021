@@ -12697,7 +12697,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 153932700258646648, guid: 0a6a5ffcc43b7454bb49926a2920bdfc, type: 3}
       propertyPath: m_FillAmount
-      value: 1
+      value: 0.425
       objectReference: {fileID: 0}
     - target: {fileID: 1976856147723156272, guid: 0a6a5ffcc43b7454bb49926a2920bdfc, type: 3}
       propertyPath: m_SizeDelta.y
