@@ -68,15 +68,13 @@ public class PlayerMovementHandler : MonoBehaviour {
     }
     Vector3 CheckNavmesh(Vector3 movedir) {
         NavMeshHit navHit;
-        Vector3 flatDir = movedir;
-        if (NavMesh.SamplePosition(movedir + transform.position, out navHit, 100, NavMesh.AllAreas)) {
-            flatDir = navHit.position - transform.position;
+        if (NavMesh.SamplePosition(movedir + transform.position, out navHit, 1f, NavMesh.AllAreas)) {
+            Debug.DrawLine(transform.position, navHit.position, Color.blue, 3f);
+            return (navHit.position - transform.position);
             /*Vector3 incomingVec = navHit.position - transform.position;
             Vector3 reflectVec = Vector3.Reflect(incomingVec, navHit.normal);
             flatDir = (incomingVec + reflectVec).normalized;*/
-            Debug.DrawLine(transform.position, navHit.position, Color.blue, 3f);
-
         }
-        return flatDir;
+        return movedir;
     }
 }
