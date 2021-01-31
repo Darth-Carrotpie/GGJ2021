@@ -6,30 +6,30 @@ using UnityEngine.Events;
 
 public class MobMovement : MonoBehaviour
 {
-    public float wanderRadius = 10;
+    public float wanderRadius = 5;
     private float timer;
     private float movementDuration = 5.0f;
     private float waitBeforeMoving = 1.0f;
     private bool hasArrived = false;
     public UnityEvent onWalk;
     public UnityEvent onStop;
- 
+
     private void Update()
     {
         if (!hasArrived)
         {
             hasArrived = true;
-            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius);
             StartCoroutine(MoveToPoint(newPos));
         }
     }
- 
+
     private IEnumerator MoveToPoint(Vector3 targetPos)
     {
         float timer = 0.0f;
         Vector3 startPos = transform.position;
         onWalk.Invoke();
- 
+
         while (timer < movementDuration)
         {
             timer += Time.deltaTime;
@@ -37,48 +37,35 @@ public class MobMovement : MonoBehaviour
             //float eased = Easing.Cubic.InOut(t);
             float eased = Easing.Quadratic.InOut(t);
             transform.position = Vector3.Lerp(startPos, targetPos, eased);
- 
+
             yield return null;
         }
- 
+
         onStop.Invoke();
         yield return new WaitForSeconds(waitBeforeMoving);
         hasArrived = false;
     }
- 
-    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) 
+
+    public static Vector3 RandomNavSphere(Vector3 origin, float dist)
     {
-        /*Vector3 randDirection = Random.insideUnitCircle * dist;
-
-        randDirection += origin;
-
         NavMeshHit navHit;
-
-        if (NavMesh.SamplePosition(randDirection, out navHit, dist, layermask))
-        {
-            return navHit.position;
-        }
-        return Vector3.zero;*/
-
-        NavMeshHit  navHit;
-        bool        canMove = false;
 
         Vector3 randDirection = Random.insideUnitCircle * dist;
 
         randDirection += origin;
 
-        if (!NavMesh.SamplePosition(randDirection, out navHit, dist, layermask))
+        for (int i = 0; i < 30; i++)
         {
-            while (!canMove)
+            randDirection = Random.insideUnitCircle * dist;
+
+            randDirection += origin;
+
+            if (NavMesh.SamplePosition(randDirection, out navHit, 1.0f, NavMesh.AllAreas))
             {
-                randDirection = Random.insideUnitCircle * dist;
-
-                randDirection += origin;
-
-                canMove = NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+                return navHit.position;
             }
         }
 
-        return navHit.position;
+        return origin;
     }
 }
