@@ -43,5 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675e90ae5b881224abff5aeb13760908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 0}
-  count: 0
+  Zombie: {fileID: 9125540326225197098, guid: 19ee1dfa26ffccf4dbf67402af7b697d, type: 3}
+  Shaman: {fileID: 6671006285290824138, guid: ad2c1d8cea87a1b429fda96f2b3dd509, type: 3}
+  Fallen: {fileID: 7275041097083584060, guid: d194071009db7a74ab29d6f514d34c4b, type: 3}
+  Beast: {fileID: 3981273230072153004, guid: 8f78a9581a8ecbe4bba05618469b9a62, type: 3}
+  count: 4
