@@ -32,9 +32,9 @@ public class GoblinAnimationHandler : MonoBehaviour {
         animator.SetBool("portal", false);
     }
     void OnLootThrow(GameMessage msg) {
-        animator.SetBool("throw", false);
+        animator.SetTrigger("throw");
     }
     void OnGoblinDeath(GameMessage msg) {
-        animator.SetBool("die", false);
+        animator.SetTrigger("die");
     }
 }
