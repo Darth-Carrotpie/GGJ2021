@@ -56,7 +56,7 @@ public class SpawnUnits : MonoBehaviour
     {
         NavMeshHit  navHit;
         bool        canMove         = false;
-        Vector3     randDirection   = Random.insideUnitSphere * dist;
+        Vector3     randDirection   = Random.insideUnitCircle * dist;
 
         randDirection += origin;
 
@@ -64,7 +64,7 @@ public class SpawnUnits : MonoBehaviour
         {
             while (!canMove)
             {
-                randDirection = Random.insideUnitSphere * dist;
+                randDirection = Random.insideUnitCircle * dist;
 
                 randDirection += origin;
 
