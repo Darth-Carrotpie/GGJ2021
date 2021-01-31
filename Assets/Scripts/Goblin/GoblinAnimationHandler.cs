@@ -11,6 +11,8 @@ public class GoblinAnimationHandler : MonoBehaviour {
         EventCoordinator.StartListening(EventName.Input.Player.StartChannelingPortal(), OnPortalStart);
         EventCoordinator.StartListening(EventName.Input.Player.StopChannelingPortal(), OnPortalStop);
         EventCoordinator.StartListening(EventName.Input.Player.MovementStopped(), OnMoveStop);
+        EventCoordinator.StartListening(EventName.Input.Player.ThrowLoot(), OnLootThrow);
+        EventCoordinator.StartListening(EventName.Input.Player.ThrowLoot(), OnGoblinDeath);
     }
 
     void OnMoveEvent(GameMessage msg) {
@@ -28,5 +30,11 @@ public class GoblinAnimationHandler : MonoBehaviour {
     }
     void OnPortalStop(GameMessage msg) {
         animator.SetBool("portal", false);
+    }
+    void OnLootThrow(GameMessage msg) {
+        animator.SetBool("throw", false);
+    }
+    void OnGoblinDeath(GameMessage msg) {
+        animator.SetBool("die", false);
     }
 }
