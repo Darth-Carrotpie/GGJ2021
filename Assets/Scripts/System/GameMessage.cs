@@ -63,4 +63,9 @@ public class GameMessage {
         targetPortal = value;
         return this;
     }
+    public Vector3 targetCoordinates;
+    public GameMessage WithTargetCoordinates(Vector3 value) {
+        targetCoordinates = value;
+        return this;
+    }
 }

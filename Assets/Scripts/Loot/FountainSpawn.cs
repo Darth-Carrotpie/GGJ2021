@@ -27,5 +27,6 @@ public class FountainSpawn : MonoBehaviour {
         itemPrefab.transform.position = transform.position;
         newItem.GetComponentInChildren<SpriteRenderer>().sprite = itemSprites[Random.Range(0, itemSprites.Count)];
         newItem.transform.parent = transform.parent;
+        newItem.GetComponent<LootFly>().ThrowAt(Vector3.zero);
     }
 }

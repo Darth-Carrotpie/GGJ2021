@@ -43,6 +43,10 @@ public class PlayerInputController : MonoBehaviour {
             //open chest
             EventCoordinator.TriggerEvent(EventName.Input.Player.OpenChest(), GameMessage.Write().WithCoordinates(transform.position));
         }
+        if (Input.GetMouseButtonDown(0)) {
+            Vector3 coord = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            EventCoordinator.TriggerEvent(EventName.Input.Player.ThrowLoot(), GameMessage.Write().WithCoordinates(transform.position).WithTargetCoordinates(coord));
+        }
     }
 
     void AddDir(Vector2 dir) {
