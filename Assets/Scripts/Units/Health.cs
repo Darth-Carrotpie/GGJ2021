@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    public Sprite[]   bloodSprite;
-    public Transform  bloodPrefab;
+    public Sprite[] bloodSprite;
+    public Transform bloodPrefab;
+    public UnityEvent onDie;
 
     void Start()
     {
@@ -28,10 +30,11 @@ public class Health : MonoBehaviour
         {
             EventCoordinator.TriggerEvent(EventName.System.Environment.MobKilled(), GameMessage.Write().WithTargetTransform(gameObject.transform));
 
+            onDie.Invoke();
             Destroy(gameObject);
 
             Transform blood = Instantiate(bloodPrefab, transform.position, Quaternion.identity);
-            blood.GetComponentInChildren<SpriteRenderer>().sprite = bloodSprite[Random.RandomRange(0, bloodSprite.Length-1)];
+            blood.GetComponentInChildren<SpriteRenderer>().sprite = bloodSprite[Random.RandomRange(0, bloodSprite.Length - 1)];
             blood.parent = transform.parent;
         }
     }
