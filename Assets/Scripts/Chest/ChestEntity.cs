@@ -12,8 +12,11 @@ public class ChestEntity : MonoBehaviour {
 
     public void Open() {
         renderer.sprite = open;
-        if (!isOpen)
+        if (!isOpen) {
+            GoblinLootCoordinator.IncreaseLoot(1);
             EventCoordinator.TriggerEvent(EventName.System.Economy.ChestWasOpened(), GameMessage.Write().WithChest(this));
+            EventCoordinator.TriggerEvent(EventName.System.Economy.AmountLootedChanged(), GameMessage.Write().WithIntMessage(GoblinLootCoordinator.GetLootAmount()));
+        }
         isOpen = true;
     }
 }
