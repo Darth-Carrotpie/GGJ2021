@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoblinHealth : MonoBehaviour
 {
-    private int health = 1;
+    private int health = 10;
 
     void Start()
     {
