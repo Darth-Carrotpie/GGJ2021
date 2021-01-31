@@ -91,6 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1761829192651252497}
+  - component: {fileID: 3443234239602571573}
   m_Layer: 0
   m_Name: Blood
   m_TagString: Untagged
@@ -113,3 +114,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3443234239602571573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2626319256363244195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2622ad460e9fd488b1f53467bab8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodSprite:
+  - {fileID: 21300000, guid: 95a1c3d228ce49c4a84c2f3bbfc7a313, type: 3}
+  - {fileID: 21300000, guid: 644a9dd3cd604c249a07062623773e51, type: 3}
+  - {fileID: 21300000, guid: fb0a0a9e2d6ebd04eb22d076f663a2c9, type: 3}
+  - {fileID: 21300000, guid: 4ccd342372067584a8a4471343251196, type: 3}
