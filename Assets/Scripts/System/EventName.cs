@@ -40,10 +40,10 @@ public class EventName {
     public class System {
         public class Economy {
             public static string ChestWasOpened() { return "Economy_ChestWasOpened"; }
+            public static string AmountLootedChanged() { return "Economy_AmountLootedChanged"; }
             public static string PortalProgress() { return "Economy_PortalProgress"; } // should be under Playfield
             public static string GoldChanged() { return "Economy_GoldChanged"; }
-            public static string ComboChanged() { return "Economy_ComboChanged"; }
-            public static List<string> Get() { return new List<string> { PortalProgress(), GoldChanged(), ChestWasOpened(), ComboChanged() }; }
+            public static List<string> Get() { return new List<string> { PortalProgress(), GoldChanged(), ChestWasOpened(), AmountLootedChanged() }; }
         }
         public class Environment {
             public static string Initialized() { return "System_Environment_Initialized"; }

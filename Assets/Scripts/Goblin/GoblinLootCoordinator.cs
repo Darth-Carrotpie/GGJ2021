@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GoblinLootCoordinator : Singleton<GoblinLootCoordinator> {
-    int currentLootAmount = 10;
+    int currentLootAmount = 1;
 
     public static int GetLootAmount() {
         return Instance.currentLootAmount;

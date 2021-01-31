@@ -18,6 +18,8 @@ public class ItemThrowController : MonoBehaviour {
             GoblinLootCoordinator.DecreaseLoot(1);
             //Debug.Log("target coords: " + msg.targetCoordinates);
             newThrown.GetComponentInChildren<SpriteRenderer>().sprite = itemSprites[Random.Range(0, itemSprites.Count)];
+            newThrown.transform.parent = GoblinLootCoordinator.Instance.transform;
+            EventCoordinator.TriggerEvent(EventName.System.Economy.AmountLootedChanged(), GameMessage.Write().WithIntMessage(GoblinLootCoordinator.GetLootAmount()));
         }
     }
 }
