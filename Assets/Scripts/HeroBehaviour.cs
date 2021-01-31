@@ -17,6 +17,7 @@ public class HeroBehaviour : MonoBehaviour
     Animator animator;
     private State previousState = State.MobAggro;
     private State state = State.MobAggro;
+    private bool isChasing = false;
     // Player/Loot/Mob, if null: immediate reevaluation
     private Transform target;
 
@@ -121,6 +122,7 @@ public class HeroBehaviour : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
         StartCoroutine(Wait());
+        EventCoordinator.StartListening(EventName.Input.Player.StartChannelingPortal(), OnStartPortal);
     }
 
     IEnumerator Chase()
@@ -155,7 +157,7 @@ public class HeroBehaviour : MonoBehaviour
             agent.isStopped = false;
             yield return null;
         }
-        while (startTime + aggroDuration > Time.time);
+        while (startTime + aggroDuration > Time.time || isChasing);
         Reevaluate();
     }
 
@@ -168,14 +170,19 @@ public class HeroBehaviour : MonoBehaviour
 
         do
         {
+            if (isChasing)
+            {
+                yield break;
+            }
             yield return null;
         }
-        while (startTime + aggroDuration > Time.time);
+        while (startTime + thinkingDuration > Time.time);
         Reevaluate();
     }
 
     IEnumerator Attack()
     {
+        isChasing = false;
         animator.SetInteger("state", 3);
         // Attack animation
         float startTime = Time.time;
@@ -186,6 +193,11 @@ public class HeroBehaviour : MonoBehaviour
             if (target == null)
             {
                 StartCoroutine(Wait());
+                yield break;
+            }
+
+            if (isChasing)
+            {
                 yield break;
             }
 
@@ -215,6 +227,11 @@ public class HeroBehaviour : MonoBehaviour
                 yield break;
             }
 
+            if (isChasing)
+            {
+                yield break;
+            }
+
             yield return null;
         }
         while (startTime + pickUpTime > Time.time);
@@ -230,5 +247,12 @@ public class HeroBehaviour : MonoBehaviour
         {
             animator.transform.localScale = new Vector3(agent.velocity.x < 0 ? 1 : -1, 1, 1);
         }
+    }
+
+    // Aggro to player when he channels portal
+    void OnStartPortal(GameMessage msg)
+    {
+        state = State.PlayerAggro;
+        target = LevelCoordinator.GetPlayer();
     }
 }

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4938041636517510444}
   - component: {fileID: -4054097377925279202}
+  - component: {fileID: -1981067780610105788}
+  - component: {fileID: 5860344525877779846}
   m_Layer: 0
   m_Name: LootUnit
   m_TagString: Untagged
@@ -48,6 +50,31 @@ MonoBehaviour:
   speed: 2
   height: 0.5
   maxRotationSpeed: 0.5
+--- !u!114 &-1981067780610105788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938041636517510446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8775081c83139409d9ed5857dbfb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+--- !u!114 &5860344525877779846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938041636517510446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2843eaa63ff80e4f9939dd4ea62dba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4938041637381420603
 GameObject:
   m_ObjectHideFlags: 0
