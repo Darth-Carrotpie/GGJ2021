@@ -16,13 +16,14 @@ public class VictorySceneShow : MonoBehaviour {
     void Update() {
         if (trigger) {
             timer += Time.deltaTime;
-            if (timer > 1f) {
+            if (timer > 2f) {
                 ShowEnd();
             }
         }
     }
 
     void ShowEnd() {
+        VictoryCoordinator.SetDefeat();
         SceneManager.LoadScene("Post", LoadSceneMode.Single);
     }
 }
