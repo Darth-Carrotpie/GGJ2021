@@ -43,7 +43,7 @@ public class MobMovement : MonoBehaviour
  
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) 
     {
-        /*Vector3 randDirection = Random.insideUnitSphere * dist;
+        /*Vector3 randDirection = Random.insideUnitCircle * dist;
 
         randDirection += origin;
 
@@ -58,7 +58,7 @@ public class MobMovement : MonoBehaviour
         NavMeshHit  navHit;
         bool        canMove = false;
 
-        Vector3 randDirection = Random.insideUnitSphere * dist;
+        Vector3 randDirection = Random.insideUnitCircle * dist;
 
         randDirection += origin;
 
@@ -66,7 +66,7 @@ public class MobMovement : MonoBehaviour
         {
             while (!canMove)
             {
-                randDirection = Random.insideUnitSphere * dist;
+                randDirection = Random.insideUnitCircle * dist;
 
                 randDirection += origin;
 

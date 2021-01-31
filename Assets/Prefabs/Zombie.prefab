@@ -109,7 +109,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6197ab19c8170a4893cf3f85a6acb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blood: {fileID: 0}
+  bloodSprite:
+  - {fileID: 21300000, guid: 95a1c3d228ce49c4a84c2f3bbfc7a313, type: 3}
+  - {fileID: 21300000, guid: 644a9dd3cd604c249a07062623773e51, type: 3}
+  - {fileID: 21300000, guid: fb0a0a9e2d6ebd04eb22d076f663a2c9, type: 3}
+  - {fileID: 21300000, guid: 4ccd342372067584a8a4471343251196, type: 3}
+  bloodPrefab: {fileID: 1761829192651252497, guid: 4241a0dcf0a2408409a5b36f17961d6e, type: 3}
 --- !u!114 &2966076280287536258
 MonoBehaviour:
   m_ObjectHideFlags: 0

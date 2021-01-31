@@ -13,10 +13,10 @@ public class Damage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("d"))
+        /*if (Input.GetKeyDown("d"))
         {
             this.TestTriggerEventDamage();
-        } 
+        } */
     }
 
     public void TestTriggerEventDamage() 
