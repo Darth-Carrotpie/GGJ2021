@@ -6,11 +6,11 @@ using UnityEngine.AI;
 public class SpawnUnits : MonoBehaviour
 {
     private List<GameObject> mobList = new List<GameObject>();
-    public  GameObject Zombie;
-    public  GameObject Shaman;
-    public  GameObject Fallen;
-    public  GameObject Beast;
-    public  int count;
+    public GameObject Zombie;
+    public GameObject Shaman;
+    public GameObject Fallen;
+    public GameObject Beast;
+    public int count;
     private int mobIndex;
 
     void Start()
@@ -27,51 +27,35 @@ public class SpawnUnits : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            mobIndex = UnityEngine.Random.Range(0,4);
+            mobIndex = UnityEngine.Random.Range(0, 4);
 
-            if (mobList[mobIndex] == null) 
+            if (mobList[mobIndex] == null)
             {
                 continue;
             }
 
-            GameObject tmp = Instantiate(mobList[mobIndex]);
-            
-            tmp.transform.SetParent(transform.parent);
+            var pos = GetRandomPoint();
+            NavMeshHit navHit;
+            if (NavMesh.SamplePosition(pos, out navHit, 1.0f, NavMesh.AllAreas))
+            {
+                GameObject tmp = Instantiate(mobList[mobIndex]);
+                tmp.transform.SetParent(transform.parent);
+                tmp.gameObject.transform.position = navHit.position;
 
-            Vector3 randomPoint = GetRandomPoint();
-            tmp.gameObject.transform.position = new Vector3(randomPoint.x, tmp.transform.position.y, randomPoint.z);
-
-            EventCoordinator.TriggerEvent(EventName.System.Environment.CreateMob(), GameMessage.Write().WithTargetTransform(tmp.transform));
+                EventCoordinator.TriggerEvent(EventName.System.Environment.CreateMob(), GameMessage.Write().WithTargetTransform(tmp.transform));
+            }
         }
     }
 
     Vector3 GetRandomPoint()
     {
-        Vector3 newPos = RandomNavSphere(transform.position, 10, -1);
-
-        return newPos + transform.position;
+        return RandomNavSphere(transform.position, 10);
     }
 
-    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) 
+    public static Vector3 RandomNavSphere(Vector3 origin, float dist)
     {
-        NavMeshHit  navHit;
-        bool        canMove         = false;
-        Vector3     randDirection   = Random.insideUnitCircle * dist;
+        Vector3 randDirection = Random.insideUnitCircle * dist;
 
-        randDirection += origin;
-
-        if (!NavMesh.SamplePosition(randDirection, out navHit, dist, layermask))
-        {
-            while (!canMove)
-            {
-                randDirection = Random.insideUnitCircle * dist;
-
-                randDirection += origin;
-
-                canMove = NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
-            }
-        }
-
-        return navHit.position;
+        return origin + new Vector3(randDirection.x, 0, randDirection.y);
     }
 }
